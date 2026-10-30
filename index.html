@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mercado 2050 · Merkadores</title>
+<meta name="description" content="Rede Merkadores, supermercados em Campo Grande e Havalon (MS). Da palavra mercador ao mercado de 2050, em uma rolagem.">
+<meta name="theme-color" content="#FAF5EA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#231719" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Rede Merkadores">
+<meta property="og:title" content="Mercado 2050 · Merkadores">
+<meta property="og:description" content="Rede Merkadores, supermercados em Campo Grande e Havalon (MS). Da palavra mercador ao mercado de 2050, em uma rolagem.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&family=Marcellus&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;padding-top:90px}
+.hero-txt{position:relative;z-index:2;max-width:640px;padding-bottom:30vh}
+.hero h1{font-size:clamp(44px,7.4vw,104px);letter-spacing:.08em;margin:14px 0 18px;color:var(--accent)}
+.hero h1 .yr{font-family:var(--f-num);font-weight:500;letter-spacing:.02em;color:var(--ink)}
+.hero .lead{font-size:clamp(18px,1.6vw,21px);max-width:32ch;color:var(--ink-soft)}
+.hero .lead strong{display:block;font-weight:600;color:var(--ink);margin-bottom:4px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-art{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-horizon{position:absolute;left:0;right:0;bottom:24%;height:2px;background:var(--line);transform-origin:left center}
+.hero-sun{position:absolute;bottom:24%;right:12%;width:min(34vw,380px);aspect-ratio:2/1;overflow:hidden}
+.hero-sun svg{display:block;width:100%;height:auto}
+.hero-prod{position:absolute;bottom:calc(24% - 1px);right:calc(12% + min(34vw,380px)/2 - min(13vw,140px)/2);width:min(13vw,140px)}
+.hero-tag{position:absolute;bottom:calc(24% - 34px);right:12%;font-family:var(--f-num);font-size:15px;letter-spacing:.14em;color:var(--ink-soft)}
+.hint{position:absolute;left:max(var(--gl), calc((100vw - 1240px)/2 + var(--gl)));bottom:calc(24% - 54px);display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);z-index:2}
+.hint i{display:block;width:44px;height:1.5px;background:var(--ink-soft);transform-origin:left}
+@media (prefers-reduced-motion: no-preference){
+  .hero-horizon{animation:draw 1.6s cubic-bezier(.6,0,.2,1) .15s both}
+  .hero-sun svg{animation:rise 1.8s cubic-bezier(.2,.7,.2,1) .5s both}
+  .hint i{animation:hint 2.4s ease-in-out infinite}
+}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes rise{from{transform:translateY(70%)}to{transform:translateY(0)}}
+@keyframes hint{0%{transform:scaleX(.2)}50%{transform:scaleX(1)}100%{transform:scaleX(.2)}}
+@media (max-width:767px){
+  .hero{align-items:start;padding-top:96px}
+  .hero-txt{padding-bottom:0}
+  .hero-sun{right:50%;transform:translateX(50%);width:min(70vw,300px);bottom:16%}
+  .hero-horizon{bottom:16%}
+  .hero-prod{right:50%;transform:translateX(50%);width:min(28vw,120px);bottom:calc(16% - 1px)}
+  .hero-tag{right:50%;transform:translateX(50%);bottom:calc(16% - 32px)}
+  .hint{bottom:calc(16% - 60px)}
+}
+
+/* capítulo 1: a palavra */
+.palavra{position:relative;background:var(--bg)}
+.pal-pin{padding:110px 0 96px}
+.pal-in{text-align:center}
+.pal-in h2{font-size:clamp(26px,3.4vw,44px);margin:12px auto 0;max-width:20ch}
+.pal-in .sub{margin:14px auto 0;max-width:44ch;color:var(--ink-soft)}
+.pal-chain{list-style:none;margin:44px auto 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 10px;max-width:980px}
+.pal-chain li{display:flex;align-items:center;gap:10px}
+.pal-chain .ar{color:var(--damasco);font-size:20px}
+.pal-chain .cell{display:flex;flex-direction:column;align-items:center;padding:14px 18px 12px;background:var(--card);border:1px solid var(--rule);border-radius:14px;min-width:120px}
+.pal-chain .w{font-family:var(--f-tit);font-size:clamp(26px,3vw,36px);line-height:1.1;color:var(--accent)}
+.pal-chain .lg{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+.pal-chain .mn{font-size:14px;color:var(--ink-soft)}
+.k{background:var(--oferta);color:#5E1E23;border-radius:.08em;padding:0 .05em}
+@media (max-width:767px){
+  .pal-chain{flex-direction:column;align-items:center}
+  .pal-chain li{flex-direction:column;gap:6px}
+  .pal-chain .ar{transform:rotate(90deg)}
+  .pal-chain .cell{min-width:220px}
+}
+.pal-stage{display:none}
+.pal-note{margin:36px auto 0;max-width:52ch;font-size:14px;color:var(--ink-soft)}
+.pal-note i{font-style:italic}
+.palavra.is-anim .pal-chain{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0}
+.palavra.is-anim .pal-stage{display:block}
+.palavra.is-anim .pal-pin{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:72px 0 40px}
+.pal-word{position:relative;font-family:var(--f-tit);font-size:clamp(46px,12.5vw,168px);line-height:1.12;color:var(--accent);white-space:nowrap;margin:40px auto 0;letter-spacing:.01em}
+.pal-word .ch{display:inline-block;will-change:transform}
+.pal-word .ch.k{background:var(--oferta);color:#5E1E23;border-radius:.06em;padding:0 .04em;margin:0 .02em}
+.pal-line{position:relative;height:2px;margin:6px auto 0;max-width:820px;background:var(--rule)}
+.pal-line i{position:absolute;inset:0;background:var(--line);transform-origin:left;transform:scaleX(0)}
+.pal-meta{margin-top:18px;min-height:56px}
+.pal-meta .pal-lg{display:block;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft)}
+.pal-meta .pal-mn{display:block;margin-top:6px;font-family:var(--f-tit);text-transform:uppercase;letter-spacing:.14em;font-size:clamp(17px,2vw,24px);color:var(--ink)}
+.pal-nodes{list-style:none;display:flex;justify-content:space-between;max-width:640px;margin:34px auto 0;padding:0;position:relative}
+.pal-nodes::before{content:"";position:absolute;left:8px;right:8px;top:7px;height:1px;background:var(--line);opacity:.35}
+.pal-nodes li{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;font-family:var(--f-num);font-size:14px;letter-spacing:.08em;color:var(--ink-soft);transition:color .3s;width:20%}
+.pal-nodes li::before{content:"";width:13px;height:13px;border-radius:50%;border:2px solid var(--line);background:var(--bg);transition:background .3s,border-color .3s}
+.pal-nodes li.on{color:var(--accent)}
+.pal-nodes li.on::before{background:var(--damasco);border-color:var(--damasco)}
+@media (max-width:767px){.pal-nodes li{font-size:12px;letter-spacing:.02em}}
+
+/* traço dos desenhos */
+.scene .ln,.prod-svg .ln{fill:none;stroke:var(--sl);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.scene .fl1{fill:var(--sf1)} .scene .fl2{fill:var(--sf2)} .scene .fl3{fill:var(--sf3)} .scene .flp{fill:var(--sfp)}
+.scene .tx{font-family:var(--f-tit);fill:var(--sl);letter-spacing:.2em;font-size:22px}
+.scene .tn{font-family:var(--f-txt);fill:var(--sl);font-size:15px;letter-spacing:.06em;opacity:.85}
+.scene .glow{fill:var(--damasco);filter:drop-shadow(0 0 6px rgba(238,148,85,.9))}
+.scene .glow-ln{fill:none;stroke:var(--damasco);stroke-width:2;stroke-linecap:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 4px rgba(238,148,85,.8))}
+.scene .route{fill:none;stroke:var(--damasco);stroke-width:2;stroke-dasharray:2 9;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.scene .wd{fill:var(--sl);opacity:.78}
+.scene .hlrow{fill:var(--damasco);opacity:.4}
+.scene .burro{fill:var(--sl)}
+.scene .pk{fill:var(--sf2);stroke:var(--sl);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.scene .sail{fill:var(--sf1);stroke:var(--sl);stroke-width:2;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+
+/* produto */
+.prod-svg{display:block;width:100%;height:auto;overflow:visible}
+.prod-svg .body{fill:var(--pf);stroke:var(--pl);stroke-width:2;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill .5s,stroke .5s}
+.prod-svg .det path,.prod-svg .det rect,.prod-svg .det circle{fill:none;stroke:var(--pl);stroke-width:1.5;stroke-linecap:round;vector-effect:non-scaling-stroke;transition:stroke .5s}
+.prod-svg .det .gl{stroke:var(--damasco);filter:drop-shadow(0 0 5px rgba(238,148,85,.9))}
+.prod-svg .det .dot{fill:var(--damasco);stroke:none}
+
+/* viagem: base = sequência vertical (celular, movimento reduzido, sem JS) */
+.journey{position:relative}
+.journey-intro{padding:96px 0 40px}
+.journey-intro h2{font-size:clamp(26px,3.4vw,44px);max-width:20ch;margin-top:12px}
+.journey-intro p.sub{margin-top:14px;max-width:46ch;color:var(--ink-soft)}
+.hud,.bgs{display:none}
+.panel{position:relative;padding:56px max(var(--gr), calc((100% - 1240px)/2 + var(--gr))) 64px max(var(--gl), calc((100% - 1240px)/2 + var(--gl)))}
+@media (max-width:767px){.p-stage{margin-left:calc(-1*var(--gl) + 4px);margin-right:calc(-1*var(--gr) + 4px)}.p-product{width:21%}}
+.panel[data-k="0"]{background:var(--e0)}
+.panel[data-k="1"]{background:var(--e1)}
+.panel[data-k="2"]{background:var(--e2)}
+.panel[data-k="3"]{background:var(--e3)}
+.panel[data-k="4"]{background:var(--e4)}
+.panel[data-k="5"]{background:var(--e5)}
+.panel[data-k="6"]{background:var(--e6)}
+.panel[data-k="7"]{background:var(--e7)}
+.panel .p-year{font-family:var(--f-num);font-weight:500;font-size:clamp(56px,14vw,96px);line-height:1;color:var(--accent);display:block}
+.panel .p-year small{font-size:.28em;letter-spacing:.18em;text-transform:uppercase;margin-left:.4em;color:var(--ink-soft);vertical-align:.9em}
+.panel .p-year .bc{font-size:.42em;letter-spacing:.04em;margin-left:.22em;color:var(--ink-soft)}
+.panel .p-year .bc.pre{margin:0 .22em 0 0}
+.panel .p-kick{margin-top:14px}
+.panel .p-value{font-family:var(--f-tit);text-transform:uppercase;letter-spacing:.14em;font-size:clamp(24px,6vw,34px);line-height:1.2;margin-top:6px}
+.p-stage{position:relative;margin:36px 0 0;aspect-ratio:1600/500;border-bottom:2px solid var(--line)}
+.p-stage .scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+.p-product{position:absolute;bottom:-1px;left:50%;width:19%;transform:translateX(-50%)}
+.p-cap{margin-top:26px;max-width:46ch}
+.p-cap h3{font-size:18px;letter-spacing:.18em}
+.p-cap p{margin-top:8px;color:var(--ink-soft)}
+.p-cap i{font-style:italic}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.chips li{font-size:13px;padding:5px 11px;border:1px solid rgba(238,148,85,.6);border-radius:999px;color:#F5DFA5}
+.panel.future{--ink:#FAF5EA;--ink-soft:#D9CBBF;--accent:#EE9455;--line:#F5DFA5;--sl:#F5DFA5;--sf1:#3A2628;--sf2:#EE9455;--sf3:#F5DFA5;--sfp:#2E1F21;--pf:#3A2628;--pl:#F5DFA5;color:var(--ink)}
+.panel .tag{display:inline-block;margin-left:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:2px 8px;vertical-align:3px;color:var(--accent)}
+.chap-break{padding:88px max(var(--gr), calc((100% - 1240px)/2 + var(--gr))) 24px max(var(--gl), calc((100% - 1240px)/2 + var(--gl)));background:var(--e4)}
+.chap-break h2{font-size:clamp(26px,3.4vw,44px);margin-top:12px}
+.chap-break p.sub{margin-top:12px;max-width:44ch;color:var(--ink-soft)}
+
+/* viagem: modo horizontal (desktop com movimento) */
+.journey.is-h .pin{position:relative;height:100vh;overflow:hidden}
+.journey.is-h .bgs{display:block;position:absolute;inset:0}
+.journey.is-h .bg{position:absolute;inset:0;opacity:0}
+.journey.is-h .bg.b0{background:var(--e0);opacity:1}
+.journey.is-h .bg.b1{background:var(--e1)}
+.journey.is-h .bg.b2{background:var(--e2)}
+.journey.is-h .bg.b3{background:var(--e3)}
+.journey.is-h .bg.b4{background:var(--e4)}
+.journey.is-h .bg.b5{background:var(--e5)}
+.journey.is-h .bg.b6{background:var(--e6)}
+.journey.is-h .bg.b7{background:var(--e7)}
+.journey.is-h .chap-break{display:none}
+.journey.is-h .track{position:absolute;top:0;left:0;height:100%;width:800vw;display:flex;will-change:transform}
+.journey.is-h .panel{flex:0 0 100vw;height:100%;padding:0;background:transparent}
+.journey.is-h .p-head,.journey.is-h .p-product{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.journey.is-h .p-stage{position:absolute;left:0;right:0;top:21%;bottom:33.333%;margin:0;aspect-ratio:auto;border:0}
+.journey.is-h .p-cap{position:absolute;left:var(--gl);top:calc(66.667% + 30px);margin:0;max-width:44ch}
+.journey.is-h .p-cap h3{font-size:20px}
+.journey.is-h .p-cap p{font-size:16px}
+.journey.is-h .panel.wide .p-cap{max-width:640px}
+.journey.is-h .panel.wide .p-cap p{max-width:62ch}
+.journey.is-h .hud{display:block;position:absolute;inset:0;pointer-events:none;color:var(--ink);transition:color .5s}
+.journey.is-h .pin.is-future{--ink:#FAF5EA;--ink-soft:#D9CBBF;--accent:#EE9455;--line:#F5DFA5;--pf:#3A2628;--pl:#F5DFA5}
+.journey.is-h .pin.is-future .p-cap{color:#FAF5EA}
+@media (min-width:768px) and (max-height:760px){.journey.is-h .p-cap p{font-size:15px;line-height:1.45}.journey.is-h .p-cap{top:calc(66.667% + 18px)}}
+
+.ruler{position:absolute;top:26px;left:calc(var(--gl) + 40px);right:calc(var(--gr) + 40px);height:46px}
+.ruler .base{position:absolute;left:0;right:0;top:10px;height:1px;background:var(--line);opacity:.35;transition:background .5s}
+.ruler .fill{position:absolute;left:0;top:9px;height:3px;width:0;background:var(--accent);transition:background .5s}
+.ruler .tick{position:absolute;top:5px;width:1px;height:11px;background:var(--line);opacity:.45}
+.ruler .lbl{position:absolute;top:22px;transform:translateX(-50%);font-family:var(--f-num);font-size:14px;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase;white-space:nowrap;transition:color .3s}
+.ruler .lbl.on{color:var(--accent)}
+.ruler .mk{position:absolute;top:3px;width:15px;height:15px;margin-left:-7.5px;border-radius:50%;background:var(--bg);border:2.5px solid var(--accent);transition:border-color .5s}
+.yearbox{position:absolute;top:96px;left:var(--gl)}
+.yearbox .chap{display:block;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;transition:color .5s}
+.yearbox .yr{font-family:var(--f-num);font-weight:500;font-size:clamp(64px,7.5vw,112px);line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums;transition:color .5s;display:block;white-space:nowrap}
+.yearbox .yr.t{font-size:clamp(40px,4.4vw,68px);line-height:1}
+.yearbox .era{display:block;margin-top:6px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+.anchor{position:absolute;top:12.5%;left:50%;transform:translateX(-50%);text-align:center;width:min(440px,40vw)}
+.anchor .kick{color:var(--ink-soft);letter-spacing:.26em;font-size:11px;transition:color .5s}
+.anchor .val{display:block;margin-top:8px;font-family:var(--f-tit);text-transform:uppercase;letter-spacing:.16em;font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--ink)}
+.anchor .bar{display:block;width:28px;height:2px;background:var(--accent);margin:12px auto 0;transition:background .5s}
+.hud-horizon{position:absolute;left:0;right:0;bottom:33.333%;height:2px;margin-bottom:-1px;background:var(--line);transform-origin:left;transition:background .5s}
+.hud-sun{position:absolute;bottom:33.333%;left:50%;width:min(44vh,380px);aspect-ratio:2/1;margin-left:calc(min(44vh,380px)/-2);overflow:hidden}
+.hud-sun svg{display:block;width:100%;height:auto}
+.hud-prod{position:absolute;bottom:calc(33.333% - 1px);left:50%;width:min(25vh,210px);margin-left:calc(min(25vh,210px)/-2)}
+.hud-next{position:absolute;right:var(--gr);bottom:24px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);transition:opacity .4s}
+
+/* loops que só rodam com movimento e com a cena ativa */
+@media (prefers-reduced-motion: no-preference){
+  .panel.on .wheel{animation:spin 6s linear infinite}
+  .panel.on .scanline{animation:scan 1.8s ease-in-out infinite}
+  .panel.on .refill{animation:refill 4.2s cubic-bezier(.3,.7,.2,1) infinite}
+  .panel.on .route{animation:march 1.4s linear infinite}
+  .panel.on .pod{animation:pod 7s ease-in-out infinite}
+  .panel.on .pulse{animation:pulse 2.6s ease-in-out infinite}
+  .panel.on .call{animation:call 2.2s ease-out infinite}
+  .panel.on .walk{animation:walk .55s ease-in-out infinite alternate}
+  .panel.on .press{animation:press 1.8s ease-in-out infinite}
+  .panel.on .beam{animation:tilt 5.2s ease-in-out infinite}
+  .panel.on .panL{animation:panL 5.2s ease-in-out infinite}
+  .panel.on .panR{animation:panR 5.2s ease-in-out infinite}
+  .panel.on .rock{animation:rock 3.6s ease-in-out infinite alternate}
+  .panel.on .wave{animation:wave 3s ease-in-out infinite alternate}
+}
+.wheel{transform-box:fill-box;transform-origin:center}
+.pod{transform-box:view-box}
+.walk,.press{transform-box:fill-box}
+.beam{transform-box:view-box;transform-origin:1230px 240px}
+.rock{transform-box:fill-box;transform-origin:50% 85%}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes scan{0%,100%{transform:translateY(0)}50%{transform:translateY(36px)}}
+@keyframes refill{0%,12%{transform:translateY(-70px);opacity:0}35%{transform:translateY(0);opacity:1}85%{opacity:1}100%{opacity:1}}
+@keyframes march{to{stroke-dashoffset:-22}}
+@keyframes pod{0%,8%{transform:translateX(0)}50%,58%{transform:translateX(230px)}100%{transform:translateX(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+@keyframes call{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
+@keyframes walk{to{transform:translateY(-5px)}}
+@keyframes press{0%,100%{transform:translate(0,0)}45%,55%{transform:translate(-5px,14px)}}
+@keyframes tilt{0%,18%{transform:rotate(-7deg)}55%,100%{transform:rotate(0)}}
+@keyframes panL{0%,18%{transform:translateY(14px)}55%,100%{transform:translateY(0)}}
+@keyframes panR{0%,18%{transform:translateY(-14px)}55%,100%{transform:translateY(0)}}
+@keyframes rock{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+@keyframes wave{from{transform:translateX(-16px)}to{transform:translateX(16px)}}
+
+/* muda × fica */
+.fica{padding:120px 0 100px}
+.fica h2{font-size:clamp(28px,4vw,52px);max-width:18ch;margin-top:12px}
+.cols{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;margin-top:56px}
+.cols h3{font-size:13px;letter-spacing:.24em;font-family:var(--f-txt);font-weight:600;color:var(--ink-soft);padding-bottom:14px;border-bottom:1px solid var(--rule)}
+.cols ul{list-style:none;margin:0;padding:0}
+.cols li{padding:18px 0;border-bottom:1px solid var(--rule);font-size:clamp(18px,1.8vw,22px)}
+.muda li{line-height:1.7}
+.muda li span{position:relative;color:var(--ink-soft);white-space:nowrap}
+.muda li span.x::after{content:"";position:absolute;left:-2px;right:-2px;top:55%;height:1.5px;background:var(--ink-soft);transform-origin:left;transform:scaleX(var(--s,1))}
+.muda li span.now{color:var(--ink);font-weight:500}
+.muda li b{font-weight:400;color:var(--damasco);margin:0 .35em}
+.fica-l li{font-family:var(--f-tit);text-transform:uppercase;letter-spacing:.14em;color:var(--accent);display:flex;align-items:center;gap:14px;padding:14px 0;font-size:clamp(17px,1.6vw,20px)}
+.fica-l li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--damasco);flex:none}
+@media (max-width:767px){.cols{grid-template-columns:1fr;gap:40px}.muda li span{white-space:normal}}
+
+/* final */
+.final{position:relative;padding:120px 0 0;overflow:hidden;text-align:center}
+.final h2{font-size:clamp(30px,5vw,68px);letter-spacing:.1em;max-width:18ch;margin:0 auto;color:var(--accent)}
+.final-art{position:relative;height:clamp(140px,22vw,240px);margin-top:48px}
+.final-art .h{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--line);transform-origin:center}
+.final-art .s{position:absolute;bottom:0;left:50%;width:clamp(220px,34vw,420px);aspect-ratio:2/1;transform:translateX(-50%);overflow:hidden}
+.final-art .s svg{display:block;width:100%;height:auto}
+
+
+.camel{fill:var(--sl,#7A2A30)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- jumento de carga, virado para a esquerda -->
+    <symbol id="burro" viewBox="0 0 120 100">
+      <g transform="matrix(-1 0 0 1 120 0)">
+        <path d="M18 50C18 42 26 37 36 37L80 37C84 37 87 35 89 32L96 20L95 5L100 17L104 4L105 19C110 22 116 30 117 37C118 42 114 45 109 44L101 41C96 46 92 52 88 58L87 66L88 97L83 97L81 70L77 70L78 97L73 97L71 68L40 68L38 97L33 97L31 68L28 68L26 97L21 97L21 62C19 58 18 54 18 50Z"/>
+        <path d="M19 46C12 50 10 60 12 73L15 73C14 62 16 54 21 50Z"/>
+        <rect class="pk" x="32" y="26" width="22" height="30" rx="5"/>
+        <rect class="pk" x="56" y="24" width="22" height="32" rx="5"/>
+        <path class="pk" d="M30 28H80" fill="none"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-head">
+  <div class="head-in">
+    <a class="brand" href="#conteudo"><picture><source srcset="assets/logo-neg.svg" media="(prefers-color-scheme: dark)"><img src="assets/logo-pos.svg" alt="Merkadores, página inicial" width="173" height="40"></picture></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">Menu</span></button>
+    <nav class="site-nav" id="menu-principal" aria-label="Principal">
+      <ul><li><a href="#viagem">Nossa história</a></li><li><a href="lojas.html">Lojas</a></li><li><a href="fornecedores.html">Seja fornecedor</a></li><li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li></ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<section class="hero">
+  <div class="wrap" style="width:100%">
+    <div class="hero-txt">
+      <p class="kick">Rede Merkadores · Campo Grande e Havalon</p>
+      <h1>Mercado <span class="yr">2050</span></h1>
+      <p class="lead"><strong>Mais de quatro mil anos de mercador. Uma rolagem.</strong>Da argila à etiqueta de luz. O jeito de atender continua o mesmo.</p>
+      <div class="cta">
+        <a class="btn solid" href="#palavra">Começar a viagem <span aria-hidden="true">↓</span></a>
+        <a class="btn" href="#lojas">Ver as lojas</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="hero-horizon"></div>
+    <div class="hero-sun"><svg viewBox="0 0 200 100" aria-hidden="true"><defs><linearGradient id="sunA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7E6B2"/><stop offset=".55" stop-color="#F3C987"/><stop offset="1" stop-color="#EE9455"/></linearGradient></defs><path d="M0 100 A100 100 0 0 1 200 100 Z" fill="url(#sunA)"/></svg></div>
+    <div class="hero-prod"><svg class="prod-svg" viewBox="0 0 240 200"><path class="body" data-shape="0"/><g class="det" data-det="0"></g></svg></div>
+    <span class="hero-tag">2500 a.C.</span>
+  </div>
+  <p class="hint" aria-hidden="true"><i></i>Role para viajar no tempo</p>
+</section>
+
+<!-- CAPÍTULO 1 · A PALAVRA -->
+<section class="palavra" id="palavra" aria-labelledby="pal-t">
+  <div class="pal-pin">
+    <div class="wrap pal-in">
+      <p class="kick">Capítulo 1 · A palavra</p>
+      <h2 id="pal-t">Antes da loja, a palavra.</h2>
+      <p class="sub">O nome da casa vem de longe. Do latim até a nossa placa.</p>
+      <ol class="pal-chain">
+        <li><span class="cell"><span class="w" lang="la">merx</span><span class="lg">latim</span><span class="mn">mercadoria</span></span></li>
+        <li><span class="ar" aria-hidden="true">→</span><span class="cell"><span class="w" lang="la">mercari</span><span class="lg">latim</span><span class="mn">negociar</span></span></li>
+        <li><span class="ar" aria-hidden="true">→</span><span class="cell"><span class="w" lang="la">mercator</span><span class="lg">latim</span><span class="mn">quem negocia</span></span></li>
+        <li><span class="ar" aria-hidden="true">→</span><span class="cell"><span class="w">mercador</span><span class="lg">português</span><span class="mn">o mesmo ofício</span></span></li>
+        <li><span class="ar" aria-hidden="true">→</span><span class="cell"><span class="w">Mer<span class="k">k</span>adores</span><span class="lg">a casa</span><span class="mn">com K, a marca da casa</span></span></li>
+      </ol>
+      <div class="pal-stage" aria-hidden="true">
+        <div class="pal-word"></div>
+        <div class="pal-line"><i></i></div>
+        <div class="pal-meta"><span class="pal-lg">latim</span><span class="pal-mn">mercadoria</span></div>
+        <ol class="pal-nodes"><li class="on">merx</li><li>mercari</li><li>mercator</li><li>mercador</li><li>Merkadores</li></ol>
+      </div>
+      <p class="pal-note">Mercúrio, deus romano do comércio, é tradicionalmente associado a <i lang="la">merx</i>. A origem do nome do deus, porém, é discutida.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAPÍTULOS 2 E 3 · A VIAGEM -->
+<section class="journey" id="viagem" aria-label="Viagem no tempo, da Suméria a 2050">
+  <div class="journey-intro wrap">
+    <p class="kick">Capítulo 2 · Os primeiros mercadores</p>
+    <h2>Antes do mercado, o mercador.</h2>
+    <p class="sub">Siga a mercadoria pela linha do horizonte. Da argila da Suméria ao mercado de 2050. No centro, fica o que a gente não troca.</p>
+  </div>
+  <div class="pin">
+    <div class="bgs" aria-hidden="true"><i class="bg b0"></i><i class="bg b1"></i><i class="bg b2"></i><i class="bg b3"></i><i class="bg b4"></i><i class="bg b5"></i><i class="bg b6"></i><i class="bg b7"></i></div>
+    <div class="track">
+
+      <!-- SUMÉRIA -->
+      <article class="panel" data-k="0">
+        <div class="p-head"><span class="p-year">2500<span class="bc">a.C.</span></span><p class="kick p-kick">O que não muda</p><p class="p-value">A palavra cumprida</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <text class="tn" x="355" y="62" text-anchor="middle">lista de profissões, em argila</text>
+            <text class="tn" x="355" y="88" text-anchor="middle">dam-gàr, em sumério · tamkārum, em acadiano</text>
+            <!-- tablete -->
+            <rect class="ln fl1" x="190" y="110" width="330" height="390" rx="34"/>
+            <path class="ln" opacity=".35" d="M214 185 H496 M214 235 H496 M214 285 H496 M214 335 H496 M214 385 H496 M214 435 H496"/>
+            <rect class="hlrow pulse" x="206" y="290" width="298" height="40" rx="6"/>
+            <path class="wd" d="M219 155L228 160L219 165Z M227 159h10v2h-10Z M252 155L261 160L252 165Z M260 159h10v2h-10Z M287 155L296 160L287 165Z M295 159h10v2h-10Z M309 155L318 160L309 165Z M317 159h10v2h-10Z M342 151L352 151L347 160Z M346 159h2v10h-2Z M379 151L389 151L384 160Z M383 159h2v10h-2Z M421 155L430 160L421 165Z M429 159h10v2h-10Z M456 155L465 160L456 165Z M464 159h10v2h-10Z M223 205L232 210L223 215Z M231 209h10v2h-10Z M245 205L254 210L245 215Z M253 209h10v2h-10Z M262 201L272 201L267 210Z M266 209h2v10h-2Z M295 205L304 210L295 215Z M303 209h10v2h-10Z M317 205L326 210L317 215Z M325 209h10v2h-10Z M358 205L367 210L358 215Z M366 209h10v2h-10Z M375 201L385 201L380 210Z M379 209h2v10h-2Z M394 205L403 210L394 215Z M402 209h10v2h-10Z M427 201L437 201L432 210Z M431 209h2v10h-2Z M446 205L455 210L446 215Z M454 209h10v2h-10Z M223 255L232 260L223 265Z M231 259h10v2h-10Z M268 255L277 260L268 265Z M276 259h10v2h-10Z M290 255L299 260L290 265Z M298 259h10v2h-10Z M328 251L338 251L333 260Z M332 259h2v10h-2Z M342 251L352 251L347 260Z M346 259h2v10h-2Z M378 255L387 260L378 265Z M386 259h10v2h-10Z M426 255L435 260L426 265Z M434 259h10v2h-10Z M448 255L457 260L448 265Z M456 259h10v2h-10Z M218 301L228 301L223 310Z M222 309h2v10h-2Z M260 305L269 310L260 315Z M268 309h10v2h-10Z M296 305L305 310L296 315Z M304 309h10v2h-10Z M318 305L327 310L318 315Z M326 309h10v2h-10Z M352 305L361 310L352 315Z M360 309h10v2h-10Z M374 305L383 310L374 315Z M382 309h10v2h-10Z M396 305L405 310L396 315Z M404 309h10v2h-10Z M439 305L448 310L439 315Z M447 309h10v2h-10Z M461 305L470 310L461 315Z M469 309h10v2h-10Z M215 355L224 360L215 365Z M223 359h10v2h-10Z M237 355L246 360L237 365Z M245 359h10v2h-10Z M270 355L279 360L270 365Z M278 359h10v2h-10Z M292 355L301 360L292 365Z M300 359h10v2h-10Z M314 355L323 360L314 365Z M322 359h10v2h-10Z M360 355L369 360L360 365Z M368 359h10v2h-10Z M382 355L391 360L382 365Z M390 359h10v2h-10Z M425 355L434 360L425 365Z M433 359h10v2h-10Z M468 355L477 360L468 365Z M476 359h10v2h-10Z M214 405L223 410L214 415Z M222 409h10v2h-10Z M245 401L255 401L250 410Z M249 409h2v10h-2Z M264 405L273 410L264 415Z M272 409h10v2h-10Z M286 405L295 410L286 415Z M294 409h10v2h-10Z M320 405L329 410L320 415Z M328 409h10v2h-10Z M360 405L369 410L360 415Z M368 409h10v2h-10Z M400 405L409 410L400 415Z M408 409h10v2h-10Z M422 405L431 410L422 415Z M430 409h10v2h-10Z M444 405L453 410L444 415Z M452 409h10v2h-10Z M211 451L221 451L216 460Z M215 459h2v10h-2Z M242 451L252 451L247 460Z M246 459h2v10h-2Z M261 455L270 460L261 465Z M269 459h10v2h-10Z M283 455L292 460L283 465Z M291 459h10v2h-10Z M318 451L328 451L323 460Z M322 459h2v10h-2Z M337 455L346 460L337 465Z M345 459h10v2h-10Z M380 455L389 460L380 465Z M388 459h10v2h-10Z M402 455L411 460L402 465Z M410 459h10v2h-10Z M424 455L433 460L424 465Z M432 459h10v2h-10Z M472 455L481 460L472 465Z M480 459h10v2h-10Z"/>
+            <path class="ln" d="M504 310 H556"/>
+            <circle class="glow" cx="560" cy="310" r="5"/>
+            <text class="tn" x="572" y="316">mercador</text>
+            <!-- o rio, o cálamo, as palmeiras -->
+            <g class="far" data-depth="0.3">
+              <path class="ln" opacity=".5" d="M960 488 q30 -10 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0"/>
+              <rect class="ln flp" x="1090" y="372" width="170" height="112" rx="16"/>
+              <path class="wd" d="M1109 395L1118 400L1109 405Z M1117 399h10v2h-10Z M1131 395L1140 400L1131 405Z M1139 399h10v2h-10Z M1153 395L1162 400L1153 405Z M1161 399h10v2h-10Z M1182 391L1192 391L1187 400Z M1186 399h2v10h-2Z M1201 395L1210 400L1201 405Z M1209 399h10v2h-10Z M1223 395L1232 400L1223 405Z M1231 399h10v2h-10Z M1109 423L1118 428L1109 433Z M1117 427h10v2h-10Z M1131 423L1140 428L1131 433Z M1139 427h10v2h-10Z M1153 423L1162 428L1153 433Z M1161 427h10v2h-10Z M1189 423L1198 428L1189 433Z M1197 427h10v2h-10Z M1107 447L1117 447L1112 456Z M1111 455h2v10h-2Z M1126 451L1135 456L1126 461Z M1134 455h10v2h-10Z M1143 447L1153 447L1148 456Z M1147 455h2v10h-2Z M1173 451L1182 456L1173 461Z M1181 455h10v2h-10Z M1195 451L1204 456L1195 461Z M1203 455h10v2h-10Z"/>
+              <g class="press"><path class="ln fl3" d="M1276 226 L1294 234 L1240 360 L1230 356 Z"/></g>
+              <path class="ln" d="M1440 488 C1436 430 1446 372 1438 318"/>
+              <path class="ln fl1" d="M1438 318 C1410 300 1388 306 1372 326 C1394 318 1414 318 1438 318 Z M1438 318 C1466 296 1492 302 1508 322 C1484 314 1462 316 1438 318 Z M1438 318 C1420 290 1402 284 1388 290 C1408 296 1424 304 1438 318 Z M1438 318 C1456 288 1476 282 1490 288 C1470 296 1454 304 1438 318 Z"/>
+              <path class="ln" d="M1540 488 C1537 446 1545 404 1539 366"/>
+              <path class="ln fl1" d="M1539 366 C1518 352 1500 356 1488 372 C1506 366 1522 366 1539 366 Z M1539 366 C1560 350 1580 354 1592 370 C1574 364 1556 364 1539 366 Z M1539 366 C1526 344 1512 340 1502 344 C1518 350 1530 356 1539 366 Z"/>
+            </g>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="0"/><g class="det" data-det="0"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>Por volta de 2500 a.C. · Suméria</h3>
+          <p>O ofício já tinha nome. No período Dinástico Arcaico, as listas de profissões escritas em argila trazem o mercador: <i>dam-gàr</i>, em sumério. Em acadiano, <i>tamkārum</i>.</p>
+        </div>
+      </article>
+
+      <!-- KANESH -->
+      <article class="panel" data-k="1">
+        <div class="p-head"><span class="p-year"><span class="bc pre">séc.</span>XX–XIX<span class="bc">a.C.</span></span><p class="kick p-kick">O que não muda</p><p class="p-value">A mercadoria certa</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <text class="tn" x="360" y="70" text-anchor="middle">contas · cartas · empréstimos</text>
+            <!-- estante de tabletes -->
+            <path class="ln" d="M150 250 H570 M150 390 H570 M160 96 V500 M560 96 V500"/>
+            <rect class="ln fl1" x="178" y="168" width="62" height="82" rx="10"/>
+            <rect class="ln flp" x="254" y="176" width="62" height="74" rx="10"/>
+            <rect class="ln fl1" x="330" y="164" width="62" height="86" rx="10"/>
+            <rect class="ln flp" x="406" y="174" width="62" height="76" rx="10"/>
+            <rect class="ln fl1" x="482" y="168" width="62" height="82" rx="10"/>
+            <path class="wd" d="M187 185L196 190L187 195Z M195 189h10v2h-10Z M209 185L218 190L209 195Z M217 189h10v2h-10Z M197 203L206 208L197 213Z M205 207h10v2h-10Z M187 221L196 226L187 231Z M195 225h10v2h-10Z M204 217L214 217L209 226Z M208 225h2v10h-2Z M267 193L276 198L267 203Z M275 197h10v2h-10Z M265 211L274 216L265 221Z M273 215h10v2h-10Z M273 229L282 234L273 239Z M281 233h10v2h-10Z M347 181L356 186L347 191Z M355 185h10v2h-10Z M346 199L355 204L346 209Z M354 203h10v2h-10Z M343 217L352 222L343 227Z M351 221h10v2h-10Z M420 191L429 196L420 201Z M428 195h10v2h-10Z M419 205L429 205L424 214Z M423 213h2v10h-2Z M411 223L421 223L416 232Z M415 231h2v10h-2Z M430 227L439 232L430 237Z M438 231h10v2h-10Z M498 185L507 190L498 195Z M506 189h10v2h-10Z M500 203L509 208L500 213Z M508 207h10v2h-10Z M487 217L497 217L492 226Z M491 225h2v10h-2Z M506 221L515 226L506 231Z M514 225h10v2h-10Z"/>
+            <!-- envelopes de argila com selo -->
+            <g>
+              <rect class="ln fl2" x="178" y="318" width="80" height="72" rx="12"/><path class="ln" d="M190 342 H246 M190 356 H246"/><circle class="ln flp" cx="218" cy="374" r="7"/>
+              <rect class="ln fl1" x="272" y="324" width="80" height="66" rx="12"/><path class="ln" d="M284 346 H340 M284 360 H340"/><circle class="ln flp" cx="312" cy="376" r="7"/>
+              <rect class="ln fl2" x="366" y="318" width="80" height="72" rx="12"/><path class="ln" d="M378 342 H434 M378 356 H434"/><circle class="ln flp" cx="406" cy="374" r="7"/>
+              <rect class="ln fl1" x="460" y="324" width="80" height="66" rx="12"/><path class="ln" d="M472 346 H528 M472 360 H528"/><circle class="ln flp" cx="500" cy="376" r="7"/>
+            </g>
+            <!-- conta da viagem -->
+            <rect class="ln flp" x="214" y="414" width="292" height="86" rx="14"/>
+            <text class="tn" x="360" y="448" text-anchor="middle">salário do guia</text>
+            <text class="tn" x="360" y="474" text-anchor="middle">ração dos jumentos</text>
+            <!-- a caravana de Assur -->
+            <g class="far" data-depth="0.32">
+              <text class="tn" x="1290" y="318" text-anchor="middle">seis a oito semanas de viagem</text>
+              <path class="route" d="M1590 494 H990"/>
+              <text class="tn" x="1590" y="476" text-anchor="end">Assur</text>
+              <text class="tn" x="990" y="476">Kanesh</text>
+              <g class="walk"><use href="#burro" class="burro" x="1080" y="380" width="128" height="108"/></g>
+              <g class="walk" style="animation-delay:-.2s"><use href="#burro" class="burro" x="1226" y="380" width="128" height="108"/></g>
+              <g class="walk" style="animation-delay:-.4s"><use href="#burro" class="burro" x="1372" y="380" width="128" height="108"/></g>
+            </g>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="1"/><g class="det" data-det="1"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>Séculos XX–XIX a.C. · Kanesh</h3>
+          <p>Mercadores de Assur levavam estanho e tecidos em caravanas de jumentos até Kanesh (Kültepe, na Anatólia, atual Turquia). Eram seis a oito semanas de viagem. Voltavam com prata e ouro. Guardavam milhares de tabletes com contas, cartas e empréstimos. Anotavam até o salário do guia e a ração dos jumentos.</p>
+        </div>
+      </article>
+
+      <!-- UR -->
+      <article class="panel" data-k="2">
+        <div class="p-head"><span class="p-year">1750<span class="bc">a.C.</span></span><p class="kick p-kick">O que não muda</p><p class="p-value">Peso honesto</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <text class="tn" x="350" y="96" text-anchor="middle">de Nanni para Ea-nāṣir</text>
+            <text class="tn" x="350" y="122" text-anchor="middle">Museu Britânico</text>
+            <!-- o tablete da reclamação -->
+            <rect class="ln fl1" x="200" y="142" width="300" height="358" rx="30"/>
+            <path class="wd" d="M229 175L238 180L229 185Z M237 179h10v2h-10Z M251 175L260 180L251 185Z M259 179h10v2h-10Z M273 175L282 180L273 185Z M281 179h10v2h-10Z M311 175L320 180L311 185Z M319 179h10v2h-10Z M358 175L367 180L358 185Z M366 179h10v2h-10Z M375 171L385 171L380 180Z M379 179h2v10h-2Z M394 175L403 180L394 185Z M402 179h10v2h-10Z M430 175L439 180L430 185Z M438 179h10v2h-10Z M231 209L240 214L231 219Z M239 213h10v2h-10Z M253 209L262 214L253 219Z M261 213h10v2h-10Z M285 205L295 205L290 214Z M289 213h2v10h-2Z M304 209L313 214L304 219Z M312 213h10v2h-10Z M321 205L331 205L326 214Z M325 213h2v10h-2Z M356 209L365 214L356 219Z M364 213h10v2h-10Z M402 209L411 214L402 219Z M410 213h10v2h-10Z M424 209L433 214L424 219Z M432 213h10v2h-10Z M225 243L234 248L225 253Z M233 247h10v2h-10Z M242 239L252 239L247 248Z M246 247h2v10h-2Z M256 239L266 239L261 248Z M260 247h2v10h-2Z M293 243L302 248L293 253Z M301 247h10v2h-10Z M315 243L324 248L315 253Z M323 247h10v2h-10Z M349 243L358 248L349 253Z M357 247h10v2h-10Z M371 243L380 248L371 253Z M379 247h10v2h-10Z M393 243L402 248L393 253Z M401 247h10v2h-10Z M425 243L434 248L425 253Z M433 247h10v2h-10Z M228 277L237 282L228 287Z M236 281h10v2h-10Z M272 277L281 282L272 287Z M280 281h10v2h-10Z M299 273L309 273L304 282Z M303 281h2v10h-2Z M329 277L338 282L329 287Z M337 281h10v2h-10Z M351 277L360 282L351 287Z M359 281h10v2h-10Z M396 277L405 282L396 287Z M404 281h10v2h-10Z M434 277L443 282L434 287Z M442 281h10v2h-10Z M451 273L461 273L456 282Z M455 281h2v10h-2Z M222 311L231 316L222 321Z M230 315h10v2h-10Z M239 307L249 307L244 316Z M243 315h2v10h-2Z M270 307L280 307L275 316Z M274 315h2v10h-2Z M284 307L294 307L289 316Z M288 315h2v10h-2Z M303 311L312 316L303 321Z M311 315h10v2h-10Z M340 311L349 316L340 321Z M348 315h10v2h-10Z M362 311L371 316L362 321Z M370 315h10v2h-10Z M379 307L389 307L384 316Z M383 315h2v10h-2Z M412 311L421 316L412 321Z M420 315h10v2h-10Z M429 307L439 307L434 316Z M433 315h2v10h-2Z M225 345L234 350L225 355Z M233 349h10v2h-10Z M261 341L271 341L266 350Z M265 349h2v10h-2Z M302 345L311 350L302 355Z M310 349h10v2h-10Z M319 341L329 341L324 350Z M323 349h2v10h-2Z M338 345L347 350L338 355Z M346 349h10v2h-10Z M376 345L385 350L376 355Z M384 349h10v2h-10Z M398 345L407 350L398 355Z M406 349h10v2h-10Z M440 345L449 350L440 355Z M448 349h10v2h-10Z M223 379L232 384L223 389Z M231 383h10v2h-10Z M262 379L271 384L262 389Z M270 383h10v2h-10Z M305 379L314 384L305 389Z M313 383h10v2h-10Z M327 379L336 384L327 389Z M335 383h10v2h-10Z M349 379L358 384L349 389Z M357 383h10v2h-10Z M380 375L390 375L385 384Z M384 383h2v10h-2Z M394 375L404 375L399 384Z M398 383h2v10h-2Z M425 375L435 375L430 384Z M429 383h2v10h-2Z M439 375L449 375L444 384Z M443 383h2v10h-2Z M458 379L467 384L458 389Z M466 383h10v2h-10Z M232 413L241 418L232 423Z M240 417h10v2h-10Z M254 413L263 418L254 423Z M262 417h10v2h-10Z M294 409L304 409L299 418Z M298 417h2v10h-2Z M324 413L333 418L324 423Z M332 417h10v2h-10Z M341 409L351 409L346 418Z M345 417h2v10h-2Z M360 413L369 418L360 423Z M368 417h10v2h-10Z M400 413L409 418L400 423Z M408 417h10v2h-10Z M422 413L431 418L422 423Z M430 417h10v2h-10Z M230 447L239 452L230 457Z M238 451h10v2h-10Z M259 443L269 443L264 452Z M263 451h2v10h-2Z M285 443L295 443L290 452Z M289 451h2v10h-2Z M304 447L313 452L304 457Z M312 451h10v2h-10Z M336 447L345 452L336 457Z M344 451h10v2h-10Z M377 443L387 443L382 452Z M381 451h2v10h-2Z M411 447L420 452L411 457Z M419 451h10v2h-10Z M433 447L442 452L433 457Z M441 451h10v2h-10Z"/>
+            <!-- a balança: do peso errado ao peso honesto -->
+            <g class="far" data-depth="0.26">
+              <path class="ln fl1" d="M1176 500 L1186 476 H1274 L1284 500 Z"/>
+              <path class="ln" d="M1230 476 V240"/>
+              <g class="beam"><path class="ln" d="M1110 240 H1350"/><circle class="ln flp" cx="1110" cy="240" r="4"/><circle class="ln flp" cx="1350" cy="240" r="4"/></g>
+              <circle class="ln fl3" cx="1230" cy="240" r="7"/>
+              <path class="ln" d="M1218 216 L1230 196 L1242 216"/>
+              <g class="panL">
+                <path class="ln" d="M1110 240 L1074 330 M1110 240 L1146 330"/>
+                <path class="ln flp" d="M1062 330 Q1110 358 1158 330 Z"/>
+                <path class="ln fl2" d="M1080 330 L1090 312 H1130 L1140 330 Z"/>
+                <text class="tn" x="1110" y="390" text-anchor="middle">cobre</text>
+              </g>
+              <g class="panR">
+                <path class="ln" d="M1350 240 L1314 330 M1350 240 L1386 330"/>
+                <path class="ln flp" d="M1302 330 Q1350 358 1398 330 Z"/>
+                <path class="ln fl3" d="M1336 330 L1341 314 H1359 L1364 330 Z"/>
+                <text class="tn" x="1350" y="390" text-anchor="middle">peso</text>
+              </g>
+            </g>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="2"/><g class="det" data-det="2"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>Por volta de 1750 a.C. · Ur</h3>
+          <p>Nanni escreve ao mercador Ea-nāṣir: o cobre veio de má qualidade e ele foi maltratado. É considerada a reclamação de cliente escrita mais antiga que se conhece. O tablete está no Museu Britânico. Desde então, o cliente lembra de quem pesa errado.</p>
+        </div>
+      </article>
+
+      <!-- MAR E ESTRADA -->
+      <article class="panel" data-k="3">
+        <div class="p-head"><span class="p-year">Depois</span><p class="kick p-kick">O que não muda</p><p class="p-value">O cliente pelo nome</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <text class="tn" x="360" y="128" text-anchor="middle">pelo mar</text>
+            <!-- navio fenício -->
+            <g class="rock">
+              <path class="ln" d="M360 430 V160 M262 186 H458 M360 160 L166 412 M360 160 L552 412"/>
+              <path class="sail" d="M270 192 H450 L442 360 H278 Z"/>
+              <path class="ln" d="M306 192 V360 M342 192 V360 M378 192 V360 M414 192 V360"/>
+              <path class="ln fl2" d="M150 410 C210 450 480 452 560 410 L548 440 C468 474 226 474 166 442 Z"/>
+              <path class="ln" d="M560 410 C584 392 590 366 574 356 C566 352 558 360 564 366 M150 410 C134 392 136 370 150 362"/>
+              <path class="ln" d="M206 452 L182 490 M246 458 L224 496 M286 460 L266 498 M326 462 L310 500 M366 462 L354 500 M406 460 L398 498 M446 458 L442 496 M486 454 L486 492"/>
+              <circle class="ln flp" cx="232" cy="426" r="7"/><circle class="ln flp" cx="282" cy="430" r="7"/><circle class="ln flp" cx="332" cy="432" r="7"/><circle class="ln flp" cx="382" cy="432" r="7"/><circle class="ln flp" cx="432" cy="430" r="7"/><circle class="ln flp" cx="482" cy="426" r="7"/>
+            </g>
+            <g class="wave"><path class="ln" opacity=".6" d="M100 484 q20 -12 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0"/></g>
+            <!-- feira, mascates e tropeiros -->
+            <g class="far" data-depth="0.24">
+              <path class="ln" d="M1010 500 V404 M1134 500 V404"/>
+              <path class="ln fl2" d="M990 404 L1012 362 H1132 L1154 404 Z"/>
+              <path class="ln fl1" d="M990 404 q11 14 22 0 q11 14 22 0 q11 14 22 0 q11 14 22 0 q11 14 22 0 q11 14 22 0 q11 14 22 0 Z"/>
+              <path class="ln" d="M1072 362 V318"/><path class="ln fl3" d="M1072 318 L1100 328 L1072 338 Z"/>
+              <rect class="ln flp" x="1030" y="452" width="84" height="48" rx="3"/><path class="ln" d="M1030 470 H1114"/>
+              <text class="tn" x="1072" y="296" text-anchor="middle">feiras</text>
+              <path class="route" d="M1590 494 C1500 486 1420 498 1200 494"/>
+              <g class="walk"><use href="#burro" class="burro" x="1270" y="384" width="124" height="104"/></g>
+              <g class="walk" style="animation-delay:-.3s"><use href="#burro" class="burro" x="1414" y="384" width="124" height="104"/></g>
+              <text class="tn" x="1400" y="352" text-anchor="middle">mascates e tropeiros</text>
+            </g>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="3"/><g class="det" data-det="3"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>Séculos depois · Pelo mar e pela estrada</h3>
+          <p>Os fenícios levaram o comércio pelo mar. Em Roma, o mercador era o <i>mercator</i>, e o mercado, o <i>mercatus</i>. Na Europa medieval, vieram as feiras. No Brasil, mascates e tropeiros levaram mercadoria pelo interior.</p>
+        </div>
+      </article>
+
+      <div class="chap-break">
+        <p class="kick">Capítulo 3 · O mercado</p>
+        <h2>De 1950 a 2050.</h2>
+        <p class="sub">A mercadoria chega à loja. Muda o balcão, fica o jeito.</p>
+      </div>
+
+      <!-- 1950 -->
+      <article class="panel" data-k="4">
+        <div class="p-head"><span class="p-year">1950</span><p class="kick p-kick">O que não muda</p><p class="p-value">Preço justo</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <path class="ln" d="M285 0 V44 M445 0 V44"/>
+            <rect class="ln flp" x="255" y="44" width="220" height="54" rx="4"/>
+            <text class="tx" x="365" y="79" text-anchor="middle">ARMAZÉM</text>
+            <path class="ln" d="M150 170 H570 M150 262 H570 M160 120 V380 M560 120 V380"/>
+            <g>
+              <rect class="ln fl1" x="178" y="122" width="34" height="48" rx="7"/><rect class="ln fl3" x="174" y="114" width="42" height="9" rx="2"/>
+              <rect class="ln flp" x="228" y="130" width="34" height="40" rx="7"/><rect class="ln fl3" x="224" y="122" width="42" height="9" rx="2"/>
+              <rect class="ln fl1" x="278" y="122" width="34" height="48" rx="7"/><rect class="ln fl3" x="274" y="114" width="42" height="9" rx="2"/>
+              <path class="ln flp" d="M345 170 V128 Q345 118 355 116 L357 100 H367 L369 116 Q379 118 379 128 V170 Z"/>
+              <path class="ln fl2" d="M398 170 V128 Q398 118 408 116 L410 100 H420 L422 116 Q432 118 432 128 V170 Z"/>
+              <rect class="ln fl1" x="455" y="122" width="34" height="48" rx="7"/><rect class="ln fl3" x="451" y="114" width="42" height="9" rx="2"/>
+              <rect class="ln flp" x="505" y="130" width="34" height="40" rx="7"/><rect class="ln fl3" x="501" y="122" width="42" height="9" rx="2"/>
+              <path class="ln fl1" d="M180 262 C176 236 182 216 196 212 C200 206 214 206 218 212 C232 216 238 236 234 262 Z"/>
+              <path class="ln flp" d="M252 262 C248 232 256 210 272 206 C276 199 292 199 296 206 C312 210 320 232 316 262 Z"/>
+              <path class="ln fl1" d="M336 262 C332 240 338 222 350 218 C354 213 366 213 370 218 C382 222 388 240 384 262 Z"/>
+              <path class="ln fl2" d="M406 262 C402 232 410 210 426 206 C430 199 446 199 450 206 C466 210 474 232 470 262 Z"/>
+              <path class="ln fl1" d="M490 262 C486 240 492 222 504 218 C508 213 520 213 524 218 C536 222 542 240 538 262 Z"/>
+            </g>
+            <rect class="ln fl1" x="130" y="380" width="460" height="120"/>
+            <path class="ln" d="M112 380 H608 M230 396 V500 M330 396 V500 M430 396 V500 M530 396 V500"/>
+            <path class="ln" d="M200 380 V372 H240 V380 M220 372 V318 M178 318 H262 M178 318 L168 346 M178 318 L188 346 M262 318 L252 346 M262 318 L272 346"/>
+            <path class="ln flp" d="M160 346 Q178 362 196 346 Z M244 346 Q262 362 280 346 Z"/>
+            <circle class="ln fl3" cx="220" cy="316" r="4"/>
+            <path class="ln" d="M452 380 V340 M548 380 V340"/>
+            <rect class="ln flp" x="440" y="322" width="120" height="34" rx="17"/>
+            <ellipse class="ln fl1" cx="543" cy="339" rx="10" ry="17"/>
+            <path class="ln flp" d="M452 356 C455 398 448 432 458 474 L540 474 C532 432 545 398 548 356 Z"/>
+            <path class="ln" d="M470 420 H530 M476 440 H520"/>
+            <!-- o caminhão no lugar do jumento; o camelo da marca segue na cena -->
+            <g class="far" data-depth="0.35">
+              <svg x="930" y="340" width="180" height="160" viewBox="165 185 325 290"><path class="camel" d="M177.1 468.8C175.4 468.5 174.7 467.5 174.8 465.6C174.9 465.1 175.0 463.1 175.1 461.3C175.2 458.4 175.2 457.7 175.6 456.4C175.7 455.6 176.0 453.9 176.2 452.7C176.5 450.0 177.5 446.2 178.5 443.6C179.8 440.1 180.1 435.0 179.1 431.0C178.7 429.5 178.6 428.8 178.5 426.4C178.4 424.2 178.3 423.4 177.9 421.9C177.6 420.6 177.5 419.4 177.3 417.9C177.2 416.3 177.1 415.1 176.8 413.9C175.6 408.9 176.3 404.2 179.2 399.1C179.7 398.1 180.6 396.4 181.1 395.3C181.6 394.1 182.6 391.9 183.3 390.5C184.0 389.1 184.9 387.2 185.2 386.1C185.6 385.1 186.7 382.7 187.6 380.8C191.7 372.4 193.7 364.2 192.8 360.3C192.7 359.6 192.4 358.3 192.2 357.3C191.7 354.7 191.5 354.0 189.3 348.4C188.1 345.1 187.3 344.5 184.6 344.5C183.1 344.5 182.3 343.9 181.9 342.8C181.6 341.7 182.0 331.2 182.4 329.6C182.6 328.8 182.9 327.1 183.1 325.9C183.9 319.4 185.2 316.7 190.4 311.1C192.1 309.3 193.9 307.3 194.5 306.5C195.1 305.6 196.4 304.0 197.6 303.0C201.7 298.6 202.6 297.7 203.6 296.3C204.1 295.5 205.2 294.2 206.0 293.3C208.0 291.0 210.1 287.8 212.1 283.8C213.8 280.5 214.2 279.8 216.4 276.9C217.6 275.2 220.8 268.9 221.9 265.9C222.8 263.5 228.1 252.9 229.2 251.2C231.0 248.5 232.6 247.7 235.3 248.3C239.2 249.3 240.0 247.8 240.2 239.6C240.3 234.0 240.3 234.0 241.2 230.3C241.7 228.2 242.3 225.8 242.5 224.8C242.6 223.8 242.9 222.5 243.0 222.0C243.2 221.4 243.4 220.1 243.6 219.1C243.8 218.1 244.1 216.7 244.3 215.9C244.6 214.7 244.6 214.0 244.7 210.8C244.9 206.9 245.0 206.1 245.7 203.6C246.7 199.7 251.2 194.7 258.5 189.2C265.3 184.0 265.6 183.4 264.6 177.9C264.1 174.8 264.1 171.9 264.7 168.9C265.4 165.0 265.3 163.2 264.0 159.8C262.0 154.7 263.6 150.9 269.7 146.4C276.7 141.1 281.8 140.6 289.5 144.4C292.0 145.6 292.8 145.9 294.1 146.2C297.2 147.0 297.6 147.1 298.1 148.1C298.7 149.1 298.4 150.5 296.8 154.3C294.4 160.5 294.6 162.8 297.5 167.3C299.2 170.1 299.6 171.2 299.9 174.2C300.0 176.6 300.3 177.5 301.6 180.3C302.1 181.6 302.9 183.6 303.4 184.9C304.7 188.8 305.9 191.4 307.6 194.3C311.2 200.2 309.4 204.2 303.6 203.2C298.3 202.2 297.4 204.4 299.8 212.0C300.2 213.1 300.7 214.8 300.9 215.8C302.0 220.1 304.8 228.0 306.0 230.1C310.5 238.7 318.9 246.1 326.3 248.1C331.1 249.3 330.7 249.3 336.7 249.4C342.6 249.5 342.8 249.5 345.3 250.5C347.3 251.3 348.2 251.5 350.9 251.7C355.8 252.0 357.2 253.6 357.8 259.6C358.0 260.5 358.1 261.7 358.3 262.3C359.2 266.2 357.3 267.3 353.8 264.7C351.4 263.0 349.3 262.5 348.0 263.4C346.0 264.7 346.4 267.5 349.8 274.5C350.8 276.5 351.8 278.9 352.2 279.9C356.9 292.4 364.9 299.8 377.4 303.1C387.5 305.8 395.1 298.9 399.0 283.3C400.3 278.4 400.1 277.4 397.7 275.9C395.5 274.7 395.3 273.7 396.9 271.2C398.6 268.6 398.6 267.4 397.4 263.5C396.1 259.3 396.3 257.6 398.8 254.7C401.9 251.0 402.2 250.2 402.4 244.4C402.5 242.1 402.6 240.1 402.6 239.8C403.4 237.4 405.2 236.8 408.2 238.0C411.0 239.1 412.2 239.0 415.4 237.7C420.7 235.7 421.9 235.6 425.8 236.8C427.1 237.2 428.9 237.7 429.8 238.0C430.7 238.2 432.4 238.6 433.5 239.0C438.9 240.7 439.4 240.7 448.1 238.5C459.2 235.7 461.8 236.1 466.8 241.4C469.4 244.1 469.7 245.1 468.5 247.7C467.6 249.6 467.6 249.8 467.9 251.7C468.4 255.2 466.8 256.5 462.9 255.7C459.2 254.9 458.9 255.0 453.6 260.3C446.5 267.4 440.9 270.5 434.2 271.1C430.5 271.4 429.5 272.6 428.7 277.4C428.5 278.4 428.3 279.7 428.1 280.2C427.9 280.8 427.8 281.9 427.6 282.6C427.5 283.4 427.2 284.9 427.0 285.9C426.7 287.0 426.4 288.6 426.2 289.4C426.0 290.4 425.6 291.7 425.1 293.0C424.0 295.9 422.6 300.0 421.8 303.1C419.1 313.2 409.6 330.1 404.2 334.2C403.7 334.7 402.5 335.6 401.7 336.4C399.2 338.5 394.9 341.3 392.3 342.3C385.8 344.9 383.0 345.8 379.0 346.5C378.0 346.7 376.7 346.9 376.1 347.1C374.6 347.4 373.0 347.6 371.5 347.6C367.4 347.6 366.1 348.6 363.5 353.5C362.8 354.8 361.8 356.5 361.3 357.3C357.0 364.0 356.8 368.5 360.3 378.2C361.0 380.2 370.4 399.1 372.1 402.1C372.7 403.1 373.5 404.7 374.0 405.8C374.5 406.9 375.1 408.2 375.4 408.7C375.8 409.3 376.5 410.5 377.0 411.4C379.3 415.0 379.6 416.9 378.9 419.9C378.2 422.4 378.3 427.1 378.9 429.8C379.2 430.8 379.4 432.4 379.5 433.2C379.7 435.2 379.9 436.0 380.7 438.0C381.1 439.0 381.5 440.4 381.7 441.2C381.8 442.1 382.2 443.6 382.4 444.7C382.6 445.8 383.0 447.4 383.1 448.2C383.8 451.8 386.5 456.4 390.3 460.5C393.5 464.2 394.3 466.1 393.4 467.6C392.5 468.9 391.9 469.1 383.3 469.0C373.3 468.9 373.9 469.5 373.8 460.4C373.7 454.5 373.7 454.5 373.3 452.7C372.9 451.2 372.8 450.6 372.7 448.2C372.6 446.0 372.5 445.2 372.1 443.6C371.9 442.6 371.7 441.1 371.5 440.2C371.4 438.2 371.0 436.7 370.4 435.1C369.8 433.9 369.7 433.5 368.2 431.5C367.7 430.9 366.9 429.6 366.4 428.7C365.9 427.8 364.9 426.3 364.1 425.3C361.3 421.5 360.1 418.6 360.1 415.6C360.1 412.8 358.5 408.7 355.6 404.2C355.0 403.4 354.2 402.1 353.8 401.3C353.4 400.6 352.1 398.5 351.0 396.7C349.8 395.0 348.5 392.9 348.1 392.2C344.3 385.3 342.0 385.2 338.6 391.7C337.9 393.3 336.8 395.3 336.2 396.1C335.6 397.0 334.8 398.3 334.4 399.0C333.4 400.9 331.6 403.7 329.9 405.8C327.4 409.1 327.2 410.0 327.0 415.1C326.9 418.5 326.9 419.0 326.5 420.7C326.2 421.7 326.0 423.2 325.9 424.1C325.7 426.1 325.3 427.6 324.7 429.2C324.1 430.6 324.0 430.8 322.1 433.4C319.5 437.0 317.5 442.8 316.7 449.3C316.5 450.5 316.3 452.2 316.1 453.0C315.1 456.8 315.4 461.7 316.7 464.5C318.7 468.5 318.0 468.9 309.7 468.9C300.0 468.9 300.1 469.0 304.2 456.7C306.2 450.6 306.3 450.2 306.4 447.0C306.5 445.4 306.7 443.8 306.8 443.0C307.2 441.2 307.2 440.3 306.8 438.5C306.4 436.5 306.3 427.1 306.8 425.2C307.4 422.6 308.4 420.2 310.0 417.8C311.7 414.9 312.4 413.4 313.8 409.4C314.9 406.2 315.2 405.0 315.6 403.0C315.7 402.0 316.3 399.7 316.7 397.9C317.2 396.1 317.7 393.7 317.9 392.7C318.0 391.8 318.3 390.3 318.5 389.5C318.7 388.7 318.9 387.4 319.0 386.5C319.1 385.6 319.3 384.0 319.6 383.0C321.3 376.0 319.7 372.9 313.9 371.8C312.0 371.5 309.8 371.0 308.9 370.8C308.4 370.7 306.7 370.5 305.3 370.5C303.9 370.4 302.2 370.2 301.6 370.1C299.4 369.6 298.7 369.5 297.3 369.3C294.8 369.0 287.0 366.7 282.8 364.9C282.0 364.6 280.6 364.0 279.5 363.6C278.5 363.2 276.7 362.5 275.6 361.9C274.4 361.4 272.9 360.6 272.0 360.3C271.1 359.9 269.7 359.2 268.7 358.6C267.7 358.1 266.0 357.3 264.9 356.8C263.8 356.4 261.9 355.6 260.9 355.1C257.5 353.6 256.1 353.2 253.0 353.4C246.7 353.7 239.6 358.4 238.1 363.3C236.6 368.1 235.7 371.3 233.8 378.7C231.5 388.0 231.4 388.5 230.1 391.7C226.8 400.1 225.3 414.1 227.0 420.7C227.6 422.7 227.6 422.7 227.6 430.5C227.7 439.9 228.1 441.9 230.5 447.1C231.1 448.4 231.9 450.2 232.2 451.2C233.8 455.4 237.0 460.9 239.7 464.3C242.7 467.9 241.4 468.9 234.0 468.9C226.6 468.9 226.6 469.0 226.5 462.9C226.4 458.8 226.3 458.5 225.2 455.7C224.7 454.7 223.9 452.5 223.4 451.0C222.5 448.2 222.0 447.4 215.6 434.4C205.5 414.1 205.7 415.7 211.0 404.7C214.9 397.0 215.0 396.5 215.0 389.1C215.0 379.6 213.4 376.2 209.5 377.6C207.3 378.3 201.6 384.2 199.5 387.8C198.9 388.7 198.1 390.1 197.6 390.9C196.7 392.3 192.4 400.8 191.7 402.5C190.1 406.5 189.0 410.4 188.8 412.8C188.7 413.7 188.4 415.2 188.2 416.2C188.0 417.1 187.7 418.7 187.6 419.6C187.5 420.5 187.3 422.0 187.1 423.0C186.8 424.0 186.6 425.5 186.5 426.4C186.4 427.4 186.1 428.9 185.9 429.9C185.3 432.4 185.1 454.1 185.7 456.4C186.3 458.4 187.2 460.9 188.1 462.7C189.7 465.7 189.7 465.7 189.7 466.6C189.7 467.6 189.4 468.1 188.4 468.6C187.6 468.9 178.7 469.2 177.1 468.8Z"/></svg>
+              <path class="ln" d="M960 500 Q1120 452 1290 500 M1230 500 Q1420 446 1600 500"/>
+              <rect class="ln fl1" x="1150" y="384" width="200" height="62" rx="3"/>
+              <path class="ln flp" d="M1166 384 C1162 360 1170 346 1184 342 C1180 334 1206 334 1202 342 C1216 346 1222 360 1218 384 Z"/>
+              <path class="ln fl2" d="M1226 384 C1222 356 1232 340 1248 336 C1244 327 1272 327 1268 336 C1284 340 1292 356 1288 384 Z"/>
+              <path class="ln flp" d="M1294 384 C1290 364 1298 352 1310 348 C1307 341 1329 341 1326 348 C1338 352 1344 364 1340 384 Z"/>
+              <path class="ln fl1" d="M1350 446 V378 Q1350 364 1364 364 H1410 L1442 404 H1458 Q1470 404 1470 416 V446 Z"/>
+              <path class="ln flp" d="M1368 376 H1404 L1428 404 H1368 Z"/>
+              <path class="ln" d="M1140 446 H1474"/>
+              <g class="wheel"><circle class="ln flp" cx="1200" cy="468" r="26"/><path class="ln" d="M1200 442 V494 M1174 468 H1226"/><circle class="ln fl3" cx="1200" cy="468" r="5"/></g>
+              <g class="wheel"><circle class="ln flp" cx="1420" cy="468" r="26"/><path class="ln" d="M1420 442 V494 M1394 468 H1446"/><circle class="ln fl3" cx="1420" cy="468" r="5"/></g>
+            </g>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="4"/><g class="det" data-det="4"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>1950 · O armazém</h3>
+          <p>Balcão de madeira, balança à vista, papel de embrulho. O peso era conferido na sua frente.</p>
+        </div>
+      </article>
+
+      <!-- 1975 -->
+      <article class="panel" data-k="5">
+        <div class="p-head"><span class="p-year">1975</span><p class="kick p-kick">O que não muda</p><p class="p-value">Gente que te atende</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <path class="ln" d="M160 500 V232 M520 500 V232"/>
+            <path class="ln fl1" d="M130 232 L160 160 H520 L550 232 Z"/>
+            <path class="ln" d="M220 160 L202 232 M280 160 L274 232 M340 160 V232 M400 160 L406 232 M460 160 L478 232"/>
+            <path class="ln fl2" d="M130 232 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 q14 20 28 0 Z"/>
+            <rect class="ln fl3" x="140" y="384" width="400" height="14" rx="3"/>
+            <path class="ln" d="M160 398 V500 M520 398 V500"/>
+            <rect class="ln flp" x="156" y="334" width="112" height="50" rx="3"/><path class="ln" d="M156 350 H268 M156 366 H268"/>
+            <rect class="ln flp" x="284" y="334" width="112" height="50" rx="3"/><path class="ln" d="M284 350 H396 M284 366 H396"/>
+            <rect class="ln flp" x="412" y="334" width="112" height="50" rx="3"/><path class="ln" d="M412 350 H524 M412 366 H524"/>
+            <g>
+              <circle class="ln fl2" cx="176" cy="322" r="12"/><circle class="ln fl2" cx="202" cy="322" r="12"/><circle class="ln fl2" cx="228" cy="322" r="12"/><circle class="ln fl2" cx="252" cy="324" r="10"/>
+              <circle class="ln fl1" cx="302" cy="323" r="11"/><circle class="ln fl1" cx="326" cy="323" r="11"/><circle class="ln fl1" cx="350" cy="323" r="11"/><circle class="ln fl1" cx="374" cy="323" r="11"/>
+              <path class="ln fl3" d="M426 334 C428 312 446 304 456 314 C466 304 484 312 486 334 Z"/><path class="ln fl3" d="M466 334 C468 316 484 308 494 316 C504 308 516 318 512 334 Z"/>
+            </g>
+            <g class="call"><path class="ln" d="M566 286 q10 16 0 32 M584 276 q16 26 0 52 M602 266 q22 36 0 72"/></g>
+            <g class="far" data-depth="0.18">
+              <path class="ln" d="M1080 412 L1004 428"/>
+              <rect class="ln fl1" x="1080" y="378" width="270" height="64" rx="4"/>
+              <path class="ln" d="M1080 400 H1350 M1080 420 H1350"/>
+              <path class="ln flp" d="M1100 378 C1096 350 1104 334 1118 330 C1114 322 1140 322 1136 330 C1150 334 1156 350 1152 378 Z"/>
+              <path class="ln fl1" d="M1160 378 C1156 346 1166 328 1182 324 C1178 315 1206 315 1202 324 C1218 328 1226 346 1222 378 Z"/>
+              <rect class="ln flp" x="1236" y="338" width="64" height="40" rx="3"/><path class="ln" d="M1236 352 H1300 M1236 364 H1300"/>
+              <g class="wheel"><circle class="ln flp" cx="1190" cy="455" r="45"/><path class="ln" d="M1190 410 V500 M1145 455 H1235 M1158 423 L1222 487 M1222 423 L1158 487"/><circle class="ln fl3" cx="1190" cy="455" r="7"/></g>
+              <path class="ln" d="M1350 442 L1360 500"/>
+            </g>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="5"/><g class="det" data-det="5"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>1975 · A feira</h3>
+          <p>A carroça chegava cedo e o pregão enchia a rua. Quem vendia sabia o seu nome.</p>
+        </div>
+      </article>
+
+      <!-- HOJE -->
+      <article class="panel" data-k="6">
+        <div class="p-head"><span class="p-year">2026<small>hoje</small></span><p class="kick p-kick">O que não muda</p><p class="p-value">Produto de verdade</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <rect class="ln flp" x="130" y="104" width="450" height="34" rx="3"/>
+            <text class="tx" x="355" y="128" text-anchor="middle" style="font-size:17px">MERCEARIA</text>
+            <path class="ln" d="M140 138 V500 M570 138 V500 M140 228 H570 M140 318 H570 M140 408 H570 M140 492 H570"/>
+            <g><rect class="ln fl1" x="152" y="177" width="36" height="51" rx="3"/><rect class="ln fl3" x="196" y="182" width="26" height="46" rx="3"/><rect class="ln fl3" x="230" y="163" width="26" height="65" rx="3"/><rect class="ln fl2" x="264" y="154" width="26" height="74" rx="3"/><rect class="ln fl1" x="298" y="181" width="26" height="47" rx="3"/><rect class="ln fl2" x="332" y="182" width="42" height="46" rx="3"/><rect class="ln fl1" x="382" y="151" width="26" height="77" rx="3"/><rect class="ln fl1" x="416" y="150" width="26" height="78" rx="3"/><rect class="ln fl3" x="450" y="183" width="30" height="45" rx="3"/><rect class="ln fl2" x="488" y="183" width="42" height="45" rx="3"/><rect class="ln flp" x="160" y="231" width="30" height="10" rx="2"/><rect class="ln flp" x="256" y="231" width="30" height="10" rx="2"/><rect class="ln flp" x="352" y="231" width="30" height="10" rx="2"/><rect class="ln flp" x="448" y="231" width="30" height="10" rx="2"/><rect class="ln fl1" x="152" y="258" width="30" height="60" rx="3"/><rect class="ln fl1" x="190" y="242" width="30" height="76" rx="3"/><rect class="ln flp" x="228" y="241" width="36" height="77" rx="3"/><rect class="ln fl3" x="272" y="270" width="30" height="48" rx="3"/><rect class="ln fl1" x="310" y="253" width="30" height="65" rx="3"/><rect class="ln fl1" x="348" y="240" width="26" height="78" rx="3"/><rect class="ln flp" x="382" y="245" width="30" height="73" rx="3"/><rect class="ln fl1" x="420" y="256" width="42" height="62" rx="3"/><rect class="ln flp" x="470" y="253" width="42" height="65" rx="3"/><rect class="ln flp" x="520" y="265" width="30" height="53" rx="3"/><rect class="ln flp" x="160" y="321" width="30" height="10" rx="2"/><rect class="ln flp" x="256" y="321" width="30" height="10" rx="2"/><rect class="ln flp" x="352" y="321" width="30" height="10" rx="2"/><rect class="ln flp" x="448" y="321" width="30" height="10" rx="2"/><rect class="ln fl3" x="152" y="361" width="30" height="47" rx="3"/><rect class="ln fl1" x="190" y="333" width="36" height="75" rx="3"/><rect class="ln flp" x="234" y="338" width="36" height="70" rx="3"/><rect class="ln fl3" x="278" y="359" width="26" height="49" rx="3"/><rect class="ln flp" x="312" y="356" width="42" height="52" rx="3"/><rect class="ln fl1" x="362" y="335" width="30" height="73" rx="3"/><rect class="ln fl3" x="400" y="362" width="26" height="46" rx="3"/><rect class="ln flp" x="434" y="345" width="36" height="63" rx="3"/><rect class="ln fl3" x="478" y="335" width="36" height="73" rx="3"/><rect class="ln flp" x="160" y="411" width="30" height="10" rx="2"/><rect class="ln flp" x="256" y="411" width="30" height="10" rx="2"/><rect class="ln flp" x="352" y="411" width="30" height="10" rx="2"/><rect class="ln flp" x="448" y="411" width="30" height="10" rx="2"/><rect class="ln flp" x="152" y="420" width="26" height="72" rx="3"/><rect class="ln flp" x="186" y="428" width="42" height="64" rx="3"/><rect class="ln flp" x="236" y="449" width="26" height="43" rx="3"/><rect class="ln fl3" x="270" y="430" width="36" height="62" rx="3"/><rect class="ln flp" x="314" y="441" width="42" height="51" rx="3"/><rect class="ln flp" x="364" y="422" width="42" height="70" rx="3"/><rect class="ln fl1" x="414" y="450" width="36" height="42" rx="3"/><rect class="ln fl3" x="458" y="445" width="36" height="47" rx="3"/><rect class="ln fl1" x="502" y="435" width="26" height="57" rx="3"/></g>
+            <path class="ln fl1" d="M1000 500 V402 H1390 V500"/>
+            <rect class="ln flp" x="1012" y="384" width="236" height="18" rx="9"/>
+            <path class="ln" d="M1040 384 V402 M1080 384 V402 M1120 384 V402 M1160 384 V402 M1200 384 V402"/>
+            <rect class="ln flp" x="1090" y="318" width="84" height="66" rx="3"/>
+            <g><rect class="fl3" x="1100.0" y="332" width="2.2" height="36"/><rect class="fl3" x="1105.3" y="332" width="1.1" height="36"/><rect class="fl3" x="1111.7" y="332" width="1.1" height="36"/><rect class="fl3" x="1117.0" y="332" width="1.1" height="36"/><rect class="fl3" x="1121.2" y="332" width="2.2" height="36"/><rect class="fl3" x="1128.7" y="332" width="1.1" height="36"/><rect class="fl3" x="1132.9" y="332" width="2.2" height="36"/><rect class="fl3" x="1138.2" y="332" width="3.3" height="36"/><rect class="fl3" x="1144.6" y="332" width="2.2" height="36"/><rect class="fl3" x="1149.9" y="332" width="1.1" height="36"/><rect class="fl3" x="1155.2" y="332" width="1.1" height="36"/><rect class="fl3" x="1161.6" y="332" width="1.1" height="36"/></g>
+            <g class="scanline"><path class="glow-ln" d="M1084 330 H1180"/></g>
+            <path class="ln" d="M1320 402 V320"/>
+            <rect class="ln fl3" x="1282" y="270" width="80" height="52" rx="5"/>
+            <rect class="ln flp" x="1290" y="278" width="64" height="30" rx="2"/>
+            <path class="ln flp" d="M1400 500 L1408 440 H1470 L1478 500 Z M1420 440 C1420 420 1458 420 1458 440"/>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="6"/><g class="det" data-det="6"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>Hoje · O mercado</h3>
+          <p>Gôndola cheia, código de barras, caixa rápido. Muita escolha, e alguém que cuida do que entra nela.</p>
+        </div>
+      </article>
+
+      <!-- 2050 -->
+      <article class="panel future wide" data-k="7">
+        <div class="p-head"><span class="p-year">2050</span><p class="kick p-kick">O que não muda</p><p class="p-value">Perto de você</p></div>
+        <div class="p-stage">
+          <svg class="scene" viewBox="0 0 1600 500" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <g>
+              <path class="ln fl1" d="M150 196 L176 150 H254 L228 196 Z M262 196 L288 150 H366 L340 196 Z M374 196 L400 150 H478 L452 196 Z M486 196 L512 150 H572 L560 196 Z"/>
+              <path class="ln" d="M163 173 H241 M275 173 H353 M387 173 H465 M499 173 H566 M202 150 L189 196 M314 150 L301 196 M426 150 L413 196 M538 150 L525 196"/>
+            </g>
+            <path class="ln" d="M140 500 V200 H580 V500"/>
+            <path class="ln" d="M170 300 H550 M170 400 H550"/>
+            <path class="ln" d="M432 214 V262" stroke-dasharray="3 6"/>
+            <g>
+              <rect class="ln fl1" x="186" y="246" width="54" height="54" rx="10"/>
+              <rect class="ln fl1" x="256" y="236" width="54" height="64" rx="10"/>
+              <rect class="ln fl1" x="326" y="246" width="54" height="54" rx="10"/>
+              <g class="refill"><rect class="ln fl2" x="405" y="246" width="54" height="54" rx="10"/></g>
+              <rect class="ln fl1" x="476" y="240" width="54" height="60" rx="10"/>
+              <rect class="ln fl1" x="186" y="342" width="70" height="58" rx="12"/>
+              <rect class="ln fl1" x="272" y="350" width="70" height="50" rx="12"/>
+              <rect class="ln fl1" x="358" y="342" width="70" height="58" rx="12"/>
+              <rect class="ln fl1" x="444" y="350" width="86" height="50" rx="12"/>
+            </g>
+            <g class="pulse">
+              <rect class="glow" x="198" y="305" width="30" height="5" rx="2.5"/><rect class="glow" x="268" y="305" width="30" height="5" rx="2.5"/><rect class="glow" x="338" y="305" width="30" height="5" rx="2.5"/><rect class="glow" x="417" y="305" width="30" height="5" rx="2.5"/><rect class="glow" x="488" y="305" width="30" height="5" rx="2.5"/>
+              <rect class="glow" x="205" y="405" width="32" height="5" rx="2.5"/><rect class="glow" x="291" y="405" width="32" height="5" rx="2.5"/><rect class="glow" x="377" y="405" width="32" height="5" rx="2.5"/><rect class="glow" x="471" y="405" width="32" height="5" rx="2.5"/>
+            </g>
+            <g class="far" data-depth="0.25">
+              <path class="route" d="M1458 400 C1420 250 1200 214 1060 330"/>
+              <path class="ln fl1" d="M1420 500 V440 L1458 410 L1496 440 V500 Z"/>
+              <path class="ln" d="M1446 500 V466 H1470 V500 M1500 500 L1540 470 M1520 500 L1560 470 M1540 500 L1580 470"/>
+              <circle class="glow" cx="1060" cy="330" r="6"/>
+              <text class="tn" x="1458" y="388" text-anchor="middle">produtor</text>
+              <text class="tn" x="1060" y="306" text-anchor="middle">loja</text>
+            </g>
+            <g class="pod">
+              <path class="ln fl1" d="M1040 486 V466 C1040 446 1056 436 1076 436 H1112 C1132 436 1144 450 1144 470 V486 Z"/>
+              <path class="glow-ln" d="M1052 462 H1132"/>
+              <circle class="ln flp" cx="1062" cy="490" r="9"/><circle class="ln flp" cx="1124" cy="490" r="9"/>
+            </g>
+          </svg>
+          <div class="p-product"><svg class="prod-svg" viewBox="0 0 240 200" aria-hidden="true"><path class="body" data-shape="7"/><g class="det" data-det="7"></g></svg></div>
+        </div>
+        <div class="p-cap">
+          <h3>2050 · O mercado do futuro <span class="tag">como imaginamos</span></h3>
+          <p>A prateleira se reabastece sozinha e a etiqueta é de luz. A origem vem rastreada do produtor até a loja. A cesta se monta pelo app e chega até você.</p>
+          <ul class="chips"><li>Reposição automática</li><li>Etiqueta de luz</li><li>Origem rastreada</li><li>Entrega autônoma</li><li>Cesta pelo app</li><li>Energia limpa</li></ul>
+        </div>
+      </article>
+
+    </div>
+    <div class="hud" aria-hidden="true">
+      <div class="ruler">
+        <span class="base"></span><span class="fill"></span>
+        <span class="tick" style="left:0.000%"></span><span class="tick" style="left:14.286%"></span><span class="tick" style="left:28.571%"></span><span class="tick" style="left:42.857%"></span><span class="tick" style="left:57.143%"></span><span class="tick" style="left:71.429%"></span><span class="tick" style="left:85.714%"></span><span class="tick" style="left:100.000%"></span><span class="lbl" style="left:0.000%">Suméria</span><span class="lbl" style="left:14.286%">Kanesh</span><span class="lbl" style="left:28.571%">Ur</span><span class="lbl" style="left:42.857%">Mar e estrada</span><span class="lbl" style="left:57.143%">1950</span><span class="lbl" style="left:71.429%">1975</span><span class="lbl" style="left:85.714%">Hoje</span><span class="lbl" style="left:100.000%">2050</span>
+        <span class="mk"></span>
+      </div>
+      <div class="yearbox"><span class="chap">Os primeiros mercadores</span><span class="yr t">2500 a.C.</span><span class="era">Suméria · data aproximada</span></div>
+      <div class="anchor"><span class="kick">O que não muda</span><span class="val">A palavra cumprida</span><span class="bar"></span></div>
+      <div class="hud-sun"><svg viewBox="0 0 200 100" aria-hidden="true"><defs><linearGradient id="sunB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7E6B2"/><stop offset=".55" stop-color="#F3C987"/><stop offset="1" stop-color="#EE9455"/></linearGradient></defs><path d="M0 100 A100 100 0 0 1 200 100 Z" fill="url(#sunB)"/></svg></div>
+      <div class="hud-horizon"></div>
+      <div class="hud-prod"><svg class="prod-svg" viewBox="0 0 240 200"><path class="body" id="morph" data-shape="0"/><g class="det" data-det="0"></g><g class="det" data-det="1"></g><g class="det" data-det="2"></g><g class="det" data-det="3"></g><g class="det" data-det="4"></g><g class="det" data-det="5"></g><g class="det" data-det="6"></g><g class="det" data-det="7"></g></svg></div>
+      <span class="hud-next">Continue rolando →</span>
+    </div>
+  </div>
+</section>
+
+<section class="fica">
+  <div class="wrap">
+    <p class="kick">Em mais de quatro mil anos</p>
+    <h2>Muda o balcão. Fica o jeito.</h2>
+    <div class="cols">
+      <div class="muda">
+        <h3>O que mudou</h3>
+        <ul>
+          <li><span class="x">Argila</span><b aria-hidden="true">→</b><span class="x">caderneta</span><b aria-hidden="true">→</b><span class="x">código de barras</span><b aria-hidden="true">→</b><span class="now">etiqueta digital</span></li>
+          <li><span class="x">Jumento</span><b aria-hidden="true">→</b><span class="x">caminhão</span><b aria-hidden="true">→</b><span class="now">entrega</span></li>
+          <li><span class="x">Balcão de madeira</span><b aria-hidden="true">→</b><span class="now">gôndola</span></li>
+          <li><span class="x">Pregão da feira</span><b aria-hidden="true">→</b><span class="now">cesta pelo app</span></li>
+        </ul>
+      </div>
+      <div class="fica-l">
+        <h3>O que fica</h3>
+        <ul><li>Peso honesto</li><li>Conhecer o cliente pelo nome</li><li>A mercadoria certa</li><li>A palavra cumprida</li><li>Preço justo</li><li>Gente que te atende</li><li>Produto de verdade</li><li>Perto de você</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>O futuro do mercado tem o jeito de sempre.</h2>
+  </div>
+  <div class="final-art" aria-hidden="true"><div class="s"><svg viewBox="0 0 200 100" aria-hidden="true"><defs><linearGradient id="sunC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7E6B2"/><stop offset=".55" stop-color="#F3C987"/><stop offset="1" stop-color="#EE9455"/></linearGradient></defs><path d="M0 100 A100 100 0 0 1 200 100 Z" fill="url(#sunC)"/></svg></div><div class="h"></div></div>
+</section>
+
+<section class="lojas" id="lojas" aria-labelledby="lojas-t">
+  <div class="wrap">
+    <p class="kick">Nossas lojas</p>
+    <h2 class="lojas-h" id="lojas-t">Duas lojas em Mato Grosso do Sul.</h2>
+    <div class="lojas-grid">
+      <article class="loja">
+        <p class="loja-tag">Matriz</p>
+        <h3>Campo Grande</h3><p class="uf">MATO GROSSO DO SUL</p>
+        <dl><dt>Endereço</dt><dd>R. Maracaju, 1408<br>Centro, Campo Grande/MS</dd><dt>Horário</dt><dd><span class="tbc">a confirmar</span></dd><dt>Contato</dt><dd><span class="tbc">a confirmar</span></dd></dl>
+        <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=R.%20Maracaju%2C%201408%2C%20Centro%2C%20Campo%20Grande%2C%20MS" target="_blank" rel="noopener">Como chegar<span class="vh"> à loja Campo Grande, abre o Google Maps em nova aba</span> <span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="loja">
+        <p class="loja-tag">Filial</p>
+        <h3>Havalon</h3><p class="uf">MATO GROSSO DO SUL</p>
+        <dl><dt>Endereço</dt><dd>Rodovia MS-080, km 80<br>Fazenda São Sebastião<br>Zona rural de Corguinho/MS</dd><dt>Horário</dt><dd><span class="tbc">a confirmar</span></dd><dt>Contato</dt><dd><span class="tbc">a confirmar</span></dd></dl>
+        <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=Rodovia%20MS-080%2C%20km%2080%2C%20Fazenda%20S%C3%A3o%20Sebasti%C3%A3o%2C%20Corguinho%2C%20MS" target="_blank" rel="noopener">Como chegar<span class="vh"> à loja Havalon, abre o Google Maps em nova aba</span> <span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+    <p class="lojas-more"><a class="btn" href="lojas.html">Ver as lojas no mapa</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="foot-logo" href="index.html"><img src="assets/logo-neg.svg" alt="Merkadores, página inicial" width="208" height="48"></a>
+    <p class="sig">Bom negócio é aqui.</p>
+    <nav aria-label="Rodapé">
+      <ul class="foot-nav">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#viagem">Nossa história</a></li>
+        <li><a href="lojas.html">Lojas</a></li>
+        <li><a href="fornecedores.html">Seja fornecedor</a></li>
+        <li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li>
+        <li><a href="privacidade.html">Privacidade</a></li>
+      </ul>
+    </nav>
+    <div class="foot-legal">
+      <p class="rs">MERKADORES COMERCIO DE PRODUTOS ALIMENTICIOS LTDA</p>
+      <p>CNPJ matriz 18.659.180/0001-83 · CNPJ filial 18.659.180/0002-64</p>
+      <p>Matriz: R. Maracaju, 1408, Centro, Campo Grande/MS</p>
+      <p>© 2026 Rede Merkadores</p>
+    </div>
+    <small>Ilustrações: interpretação artística.</small>
+    <p class="fontes">Fontes:
+      <a href="https://www.etymonline.com/word/merchant" target="_blank" rel="noopener">Etymonline, “merchant”</a> ·
+      <a href="https://www.metmuseum.org/art/collection/search/325851" target="_blank" rel="noopener">The Met, tablete de Kanesh</a> ·
+      <a href="https://en.wikipedia.org/wiki/Complaint_tablet_to_Ea-n%C4%81%E1%B9%A3ir" target="_blank" rel="noopener">Wikipédia, tablete de Ea-nāṣir</a> ·
+      <a href="https://archiv.ub.uni-heidelberg.de/propylaeumdok/id/eprint/680/contents" target="_blank" rel="noopener">Universidade de Heidelberg, dam-gàr</a>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- a mercadoria: 8 silhuetas com os mesmos 14 pontos, para morfose real ---------- */
+  var SHAPES = [
+    /* Suméria: jarro de barro */
+    [[84,190],[120,192],[156,190],[192,156],[200,118],[178,84],[146,64],[152,40],[120,36],[88,40],[94,64],[62,84],[40,118],[48,156]],
+    /* Kanesh: fardo de tecido */
+    [[40,190],[120,192],[200,190],[210,160],[212,124],[204,96],[180,88],[150,86],[120,74],[90,86],[60,88],[36,96],[28,124],[30,160]],
+    /* Ur: lingote de cobre */
+    [[34,190],[120,191],[206,190],[214,170],[218,146],[208,128],[184,122],[150,120],[120,120],[90,120],[56,122],[32,128],[22,146],[26,170]],
+    /* mar e estrada: ânfora */
+    [[110,186],[120,194],[130,186],[168,140],[182,96],[170,66],[144,52],[138,30],[120,26],[102,30],[96,52],[70,66],[58,96],[72,140]],
+    /* 1950 embrulho de papel amarrado */
+    [[40,190],[120,192],[200,190],[206,150],[204,105],[190,82],[150,74],[132,52],[120,40],[108,52],[90,74],[50,82],[36,105],[34,150]],
+    /* 1975 cesto de vime */
+    [[70,190],[120,192],[170,190],[190,160],[208,125],[218,98],[196,94],[150,96],[120,97],[90,96],[44,94],[22,98],[32,125],[50,160]],
+    /* hoje: cestinha de mercado */
+    [[46,190],[120,191],[194,190],[198,152],[203,116],[210,96],[196,93],[150,94],[120,94],[90,94],[44,93],[30,96],[37,116],[42,152]],
+    /* 2050: cesta-cápsula */
+    [[64,186],[120,190],[176,186],[206,162],[214,128],[204,98],[178,80],[150,71],[120,68],[90,71],[62,80],[36,98],[26,128],[34,162]]
+  ];
+
+  var holes = "";
+  [112, 136, 160].forEach(function (y) {
+    [56, 86, 116, 146, 176].forEach(function (x) {
+      holes += '<rect x="' + x + '" y="' + y + '" width="16" height="12" rx="3"/>';
+    });
+  });
+
+  var DETAILS = [
+    '<path d="M92 46 H148"/><path d="M58 108 C100 117 140 117 182 108"/><path d="M48 136 C96 145 144 145 192 136"/><path d="M76 122 l9 4 M98 124 l9 4 M120 125 l9 4 M142 124 l9 4"/>',
+    '<path d="M120 76 V190"/><path d="M30 140 C90 147 150 147 210 140"/><path d="M120 76 C102 58 94 80 112 82"/><path d="M120 76 C138 58 146 80 128 82"/><path d="M42 112 C90 118 150 118 198 112"/><path d="M38 168 C90 174 150 174 202 168"/>',
+    '<path d="M36 140 C90 134 150 134 204 140"/><path d="M50 166 H190"/><path d="M92 152 l8 -7 M116 152 l8 -7 M140 152 l8 -7"/>',
+    '<path d="M138 34 C164 30 176 46 170 66"/><path d="M102 34 C76 30 64 46 70 66"/><path d="M102 52 H138"/><path d="M62 100 C100 108 140 108 178 100"/><path d="M68 124 C102 131 138 131 172 124"/>',
+    '<path d="M120 58 V190"/><path d="M38 132 C80 137 160 137 204 132"/><path d="M120 58 C102 42 94 62 112 62"/><path d="M120 58 C138 42 146 62 128 62"/><path d="M58 88 L78 110"/><path d="M182 88 L162 110"/>',
+    '<path d="M40 96 C50 18 190 18 200 96"/><path d="M30 118 C90 126 150 126 210 118"/><path d="M40 142 C95 150 145 150 200 142"/><path d="M52 166 C100 172 140 172 188 166"/><path d="M70 100 L82 188"/><path d="M100 100 L104 190"/><path d="M140 100 L136 190"/><path d="M170 100 L158 188"/>',
+    '<path d="M44 93 L70 52 H170 L196 93"/>' + holes,
+    '<path class="gl" d="M30 132 C90 143 150 143 210 132"/><path d="M62 82 C100 97 140 97 178 82"/><path d="M104 42 C112 34 128 34 136 42"/><path d="M96 31 C110 19 130 19 144 31"/><circle class="dot" cx="120" cy="50" r="3.2"/>'
+  ];
+
+  function pathFrom(pts) {
+    var n = pts.length, d = "M" + pts[0][0].toFixed(1) + " " + pts[0][1].toFixed(1);
+    for (var i = 0; i < n; i++) {
+      var p0 = pts[(i - 1 + n) % n], p1 = pts[i], p2 = pts[(i + 1) % n], p3 = pts[(i + 2) % n];
+      var c1x = p1[0] + (p2[0] - p0[0]) / 6, c1y = p1[1] + (p2[1] - p0[1]) / 6;
+      var c2x = p2[0] - (p3[0] - p1[0]) / 6, c2y = p2[1] - (p3[1] - p1[1]) / 6;
+      d += "C" + c1x.toFixed(1) + " " + c1y.toFixed(1) + " " + c2x.toFixed(1) + " " + c2y.toFixed(1) + " " + p2[0].toFixed(1) + " " + p2[1].toFixed(1);
+    }
+    return d + "Z";
+  }
+  function mix(a, b, t) {
+    var out = [];
+    for (var i = 0; i < a.length; i++) out.push([a[i][0] + (b[i][0] - a[i][0]) * t, a[i][1] + (b[i][1] - a[i][1]) * t]);
+    return out;
+  }
+  function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+  function smooth(t) { t = clamp(t); return t * t * (3 - 2 * t); }
+
+  /* desenhos estáticos (celular, movimento reduzido e primeiro quadro) */
+  document.querySelectorAll("[data-shape]").forEach(function (el) {
+    el.setAttribute("d", pathFrom(SHAPES[+el.getAttribute("data-shape")]));
+  });
+  document.querySelectorAll("[data-det]").forEach(function (el) {
+    el.innerHTML = DETAILS[+el.getAttribute("data-det")];
+  });
+
+  if (!window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
+  /* ---------- capítulo 1: a palavra ---------- */
+  var WORDS = ["merx", "mercari", "mercator", "mercador", "Merkadores"];
+  var LGS = ["latim", "latim", "latim", "português", "a casa"];
+  var MNS = ["mercadoria", "negociar", "quem negocia", "o mesmo ofício", "com K, a marca da casa"];
+  var pal = document.querySelector(".palavra");
+  var palPin = pal.querySelector(".pal-pin");
+  var wordEl = pal.querySelector(".pal-word");
+  var lgEl = pal.querySelector(".pal-lg");
+  var mnEl = pal.querySelector(".pal-mn");
+  var lineEl = pal.querySelector(".pal-line i");
+  var nodes = pal.querySelectorAll(".pal-nodes li");
+  var palCur = 0, slots = [], wtl = null, mtl = null;
+
+  function isK(ch) { return ch && ch.toLowerCase() === "k"; }
+  function mkCh(ch) {
+    var s = document.createElement("span");
+    s.className = "ch" + (isK(ch) ? " k" : "");
+    s.textContent = ch;
+    return s;
+  }
+  function drawWord(w) {
+    wordEl.innerHTML = ""; slots = [];
+    for (var i = 0; i < w.length; i++) { var s = mkCh(w[i]); wordEl.appendChild(s); slots.push(s); }
+  }
+  function setStep(n) {
+    if (n === palCur) return;
+    if (wtl) wtl.progress(1).kill();
+    if (mtl) mtl.progress(1).kill();
+    var from = WORDS[palCur], to = WORDS[n];
+    palCur = n;
+    wtl = gsap.timeline();
+    var L = Math.max(from.length, to.length), d = 0, gone = [];
+    for (var i = 0; i < L; i++) {
+      var a = from[i], b = to[i], s = slots[i];
+      if (a !== undefined && b !== undefined) {
+        if (a === b) continue;
+        if (a.toLowerCase() === b.toLowerCase()) { s.textContent = b; continue; }
+        (function (s, b, at) {
+          wtl.to(s, { yPercent: -60, opacity: 0, duration: 0.16, ease: "power1.in" }, at)
+             .call(function () { s.textContent = b; s.className = "ch" + (isK(b) ? " k" : ""); }, null, at + 0.16)
+             .fromTo(s, { yPercent: 60, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.38, ease: "back.out(2.2)" }, at + 0.16);
+        })(s, b, d * 0.05);
+        d++;
+      } else if (b === undefined) {
+        gone.push(s);
+        wtl.to(s, { yPercent: -50, opacity: 0, duration: 0.18, ease: "power1.in" }, d * 0.04);
+        d++;
+      } else {
+        var ns = mkCh(b);
+        wordEl.appendChild(ns); slots[i] = ns;
+        gsap.set(ns, { yPercent: 60, opacity: 0 });
+        wtl.to(ns, { yPercent: 0, opacity: 1, duration: 0.38, ease: "back.out(2.2)" }, 0.12 + d * 0.06);
+        d++;
+      }
+    }
+    slots.length = to.length;
+    if (gone.length) wtl.call(function () { gone.forEach(function (g) { g.remove(); }); });
+    if (n === 4) {
+      wtl.call(function () {
+        var k = wordEl.querySelector(".k");
+        if (k) gsap.fromTo(k, { scale: 1.35 }, { scale: 1, duration: 0.6, ease: "elastic.out(1,0.45)" });
+      });
+    }
+    mtl = gsap.timeline()
+      .to([lgEl, mnEl], { opacity: 0, y: -6, duration: 0.15 })
+      .call(function () { lgEl.textContent = LGS[n]; mnEl.textContent = MNS[n]; })
+      .to([lgEl, mnEl], { opacity: 1, y: 0, duration: 0.35, stagger: 0.05, ease: "power2.out" });
+    for (var j = 0; j < nodes.length; j++) nodes[j].classList.toggle("on", j <= n);
+  }
+
+  /* ---------- viagem ---------- */
+  var journey = document.querySelector(".journey");
+  var pin = journey.querySelector(".pin");
+  var track = journey.querySelector(".track");
+  var panels = Array.prototype.slice.call(journey.querySelectorAll(".panel"));
+  var bgs = journey.querySelectorAll(".bg");
+  var hud = journey.querySelector(".hud");
+  var chapEl = hud.querySelector(".chap");
+  var yrEl = hud.querySelector(".yr");
+  var eraEl = hud.querySelector(".era");
+  var valEl = hud.querySelector(".val");
+  var mk = hud.querySelector(".mk");
+  var fill = hud.querySelector(".fill");
+  var lbls = hud.querySelectorAll(".lbl");
+  var morph = hud.querySelector("#morph");
+  var dets = hud.querySelectorAll(".hud-prod .det");
+  var sunSvg = hud.querySelector(".hud-sun svg");
+  var nextEl = hud.querySelector(".hud-next");
+  var fars = panels.map(function (p) { return Array.prototype.slice.call(p.querySelectorAll(".far")); });
+
+  var N = 8;
+  var YEARS = [0, 0, 0, 0, 1950, 1975, 2026, 2050];
+  var YTXT = ["2500 a.C.", "XX–XIX a.C.", "1750 a.C.", "Depois", "1950", "1975", "2026", "2050"];
+  var ERAS = ["Suméria · data aproximada", "Séculos · Kanesh, Anatólia", "Ur · data aproximada", "Pelo mar e pela estrada", "O armazém", "A feira", "Hoje", "O mercado do futuro"];
+  var VALUES = ["A palavra cumprida", "A mercadoria certa", "Peso honesto", "O cliente pelo nome", "Preço justo", "Gente que te atende", "Produto de verdade", "Perto de você"];
+
+  var mm = gsap.matchMedia();
+
+  mm.add({
+    desk: "(min-width: 768px) and (prefers-reduced-motion: no-preference)",
+    mob: "(max-width: 767px) and (prefers-reduced-motion: no-preference)"
+  }, function (ctx) {
+    var c = ctx.conditions;
+
+    /* 1. a palavra se forma com a rolagem */
+    pal.classList.add("is-anim");
+    palCur = 0; drawWord(WORDS[0]);
+    lgEl.textContent = LGS[0]; mnEl.textContent = MNS[0];
+    for (var j = 0; j < nodes.length; j++) nodes[j].classList.toggle("on", j === 0);
+    gsap.from(wordEl.children, {
+      yPercent: 70, opacity: 0, duration: 0.7, stagger: 0.07, ease: "back.out(2)",
+      scrollTrigger: { trigger: palPin, start: "top 65%" }
+    });
+    ScrollTrigger.create({
+      trigger: palPin, start: "top top",
+      end: function () { return "+=" + Math.round(window.innerHeight * 2.6); },
+      pin: true, anticipatePin: 1, invalidateOnRefresh: true,
+      onUpdate: function (self) {
+        lineEl.style.transform = "scaleX(" + self.progress.toFixed(4) + ")";
+        setStep(Math.min(4, Math.floor(self.progress * 5)));
+      }
+    });
+
+    /* 2. a viagem */
+    if (c.mob) {
+      panels.forEach(function (p) {
+        gsap.from(p.querySelectorAll(".p-head > *, .p-cap > *"), {
+          opacity: 0, y: 22, duration: 0.6, stagger: 0.08, ease: "power2.out",
+          scrollTrigger: { trigger: p, start: "top 78%" }
+        });
+        gsap.from(p.querySelector(".p-product"), {
+          yPercent: 30, opacity: 0, duration: 0.8, ease: "power3.out",
+          scrollTrigger: { trigger: p.querySelector(".p-stage"), start: "top 80%" }
+        });
+        ScrollTrigger.create({ trigger: p, start: "top 70%", end: "bottom 30%", toggleClass: "on" });
+      });
+    } else {
+      journey.classList.add("is-h");
+      var state = { p: 0 };
+      var curVal = 0, valTl = null, lastFuture = null, lastYr = "", lastChap = "";
+
+      var setValue = function (i) {
+        if (i === curVal) return;
+        curVal = i;
+        if (valTl) valTl.kill();
+        valTl = gsap.timeline()
+          .to(valEl, { opacity: 0, y: -10, duration: 0.18, ease: "power1.in" })
+          .call(function () { valEl.textContent = VALUES[i]; eraEl.textContent = ERAS[i]; })
+          .fromTo(valEl, { y: 12 }, { opacity: 1, y: 0, duration: 0.42, ease: "power2.out" });
+      };
+
+      var render = function () {
+        var u = state.p * (N - 1);
+        var i = Math.min(Math.floor(u), N - 2);
+        var e = smooth((u - i - 0.22) / 0.56);
+        var pos = i + e;
+        var r = Math.round(pos);
+
+        track.style.transform = "translate3d(" + (-pos * 100) + "vw,0,0)";
+        for (var k = 1; k < N; k++) bgs[k].style.opacity = k === N - 1 ? clamp((pos - (N - 2)) * 1.8 - 0.4) : clamp(pos - (k - 1));
+
+        var txt, isT;
+        if (i >= 4) { txt = String(Math.round(YEARS[i] + (YEARS[i + 1] - YEARS[i]) * e)); isT = false; }
+        else { txt = YTXT[r]; isT = r < 4; }
+        if (txt !== lastYr) { yrEl.textContent = txt; yrEl.classList.toggle("t", isT); lastYr = txt; }
+        var chap = pos < 3.5 ? "Os primeiros mercadores" : "O mercado";
+        if (chap !== lastChap) { chapEl.textContent = chap; lastChap = chap; }
+
+        var pct = (pos / (N - 1) * 100) + "%";
+        mk.style.left = pct; fill.style.width = pct;
+        for (var l = 0; l < lbls.length; l++) lbls[l].classList.toggle("on", l === r);
+
+        morph.setAttribute("d", pathFrom(mix(SHAPES[i], SHAPES[i + 1], e)));
+        for (var d = 0; d < dets.length; d++) dets[d].style.opacity = clamp(1 - Math.abs(pos - d) * 1.6);
+
+        sunSvg.style.transform = "translateY(" + (38 - pos * (38 / (N - 1))) + "%)";
+
+        var fut = pos > N - 1.5;
+        if (fut !== lastFuture) { pin.classList.toggle("is-future", fut); lastFuture = fut; }
+        setValue(r);
+
+        for (var q = 0; q < panels.length; q++) {
+          var off = pos - q;
+          panels[q].classList.toggle("on", Math.abs(off) < 0.5);
+          for (var f = 0; f < fars[q].length; f++) {
+            var depth = parseFloat(fars[q][f].getAttribute("data-depth")) || 0.2;
+            fars[q][f].style.transform = "translateX(" + (off * depth * 520) + "px)";
+          }
+        }
+        nextEl.style.opacity = state.p > 0.93 ? 0 : 1;
+      };
+
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: pin, start: "top top",
+          end: function () { return "+=" + window.innerHeight * (N - 1) * 1.1; },
+          pin: true, scrub: 0.7, invalidateOnRefresh: true
+        }
+      });
+      tl.to(state, { p: 1, duration: 1, ease: "none", onUpdate: render });
+      render();
+
+      gsap.from(".hud-horizon", {
+        scaleX: 0, duration: 1.4, ease: "power3.inOut",
+        scrollTrigger: { trigger: journey, start: "top 60%" }
+      });
+    }
+
+    /* 3. muda × fica, final */
+    gsap.utils.toArray(".muda li").forEach(function (li) {
+      var xs = li.querySelectorAll(".x");
+      var t = gsap.timeline({ scrollTrigger: { trigger: li, start: "top 85%", end: "top 50%", scrub: 0.5 } });
+      xs.forEach(function (s) { t.fromTo(s, { "--s": 0 }, { "--s": 1, ease: "none", duration: 1 }); });
+    });
+    gsap.from(".fica-l li", {
+      opacity: 0, x: -14, duration: 0.6, stagger: 0.09, ease: "power2.out",
+      scrollTrigger: { trigger: ".fica-l", start: "top 75%" }
+    });
+    var fin = gsap.timeline({ scrollTrigger: { trigger: ".final", start: "top 70%", end: "bottom 85%", scrub: 0.6 } });
+    fin.from(".final-art .h", { scaleX: 0, ease: "none", duration: 1 })
+       .from(".final-art .s svg", { yPercent: 100, ease: "none", duration: 1 }, 0.3);
+
+    return function () {
+      pal.classList.remove("is-anim");
+      if (wtl) wtl.kill();
+      if (mtl) mtl.kill();
+      journey.classList.remove("is-h");
+      pin.classList.remove("is-future");
+      track.style.transform = "";
+      panels.forEach(function (p, q) {
+        p.classList.remove("on");
+        fars[q].forEach(function (g) { g.style.transform = ""; });
+      });
+    };
+  });
+})();
+</script>
+</body>
+</html>

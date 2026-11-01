@@ -216,3 +216,16 @@ main:focus{outline:none}
 @media (prefers-reduced-motion: reduce){
   .site-head,.btn,.nav-toggle .bars i{transition:none}
 }
+
+/* aviso de cookies (Microsoft Clarity só com aceite) */
+.cookie-pref{font:inherit;font-size:13px;color:#FAF5EA;background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:2px;cursor:pointer}
+.cookie-pref:focus-visible{outline:2px solid #F5DFA5;outline-offset:3px}
+.cookie-aviso{position:fixed;z-index:60;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:520px;margin:0 auto;background:#231719;color:#FAF5EA;border:1px solid rgba(245,223,165,.35);border-radius:14px;padding:18px 18px 16px;box-shadow:0 12px 32px rgba(35,23,25,.35);font-family:var(--f-txt);display:flex;flex-direction:column;gap:8px}
+.cookie-t{margin:0;font-weight:600;font-size:16px}
+.cookie-d{margin:0;font-size:14px;line-height:1.5;color:rgba(250,245,234,.85)}
+.cookie-d a{color:#F5DFA5}
+.cookie-b{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+.cookie-b button{font:inherit;font-size:15px;font-weight:600;min-height:44px;padding:0 20px;border-radius:8px;cursor:pointer}
+.cookie-sim{background:#EE9455;color:#231719;border:0}
+.cookie-nao{background:none;color:#FAF5EA;border:1px solid rgba(250,245,234,.5)}
+.cookie-b button:focus-visible{outline:2px solid #F5DFA5;outline-offset:2px}

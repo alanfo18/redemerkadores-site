@@ -3,7 +3,7 @@
 (function () {
   "use strict";
   // ID do projeto no Microsoft Clarity (clarity.microsoft.com > Settings > Overview). Não é segredo: aparece no código da página.
-  var CLARITY_ID = "";
+  var CLARITY_ID = "z6vihy6asz";
   var CHAVE = "mk-cookies";
   var VALIDADE_DIAS = 365;
 

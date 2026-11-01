@@ -205,9 +205,6 @@ main:focus{outline:none}
 .foot-nav a:hover{text-decoration:underline;text-underline-offset:4px}
 .foot-legal{margin-top:28px;padding-top:24px;border-top:1px solid rgba(245,223,165,.25);font-size:14px;line-height:1.7;color:rgba(250,245,234,.85)}
 .foot-legal .rs{font-weight:600;color:#FAF5EA;letter-spacing:.04em}
-.foot small{display:block;margin-top:24px;font-size:13px;color:rgba(250,245,234,.85)}
-.foot .fontes{margin-top:12px;font-size:12px;line-height:1.7;color:rgba(250,245,234,.85)}
-.foot .fontes a{color:#FAF5EA;text-underline-offset:2px;overflow-wrap:anywhere}
 
 /* entrada suave */
 @media (prefers-reduced-motion: no-preference){
